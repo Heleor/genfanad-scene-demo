@@ -1,0 +1,13 @@
+{
+  "spawnRate": 0,
+  "capacity": 1,
+  "wanderArea": {
+    "type": "rect",
+    "layer": "world",
+    "minx": 169,
+    "maxx": 172,
+    "miny": 189,
+    "maxy": 192
+  },
+  "npc": "trader-joe"
+}

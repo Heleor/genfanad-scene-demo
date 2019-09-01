@@ -1,0 +1,11 @@
+{
+  "spawnRate": 400,
+  "location": {
+    "layer": "world",
+    "x": 176,
+    "y": 198
+  },
+  "item": {
+    "item": "smithed-weapon-bronze-hatchet"
+  }
+}

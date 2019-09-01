@@ -1,0 +1,12 @@
+{
+  "spawnRate": 70,
+  "capacity": 4,
+  "wanderArea": {
+    "type": "circle",
+    "layer": "world",
+    "x": -209,
+    "y": 85,
+    "radius": 15
+  },
+  "npc": "dwarf"
+}

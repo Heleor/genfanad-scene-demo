@@ -1,0 +1,14 @@
+{
+  "church": {
+    "side": "roofs/church-side.jpg",
+    "top": "roofs/church-top.jpg"
+  },
+  "clay": {
+    "side": "roofs/clay-side.jpg",
+    "top": "roofs/clay-top.jpg"
+  },
+  "straw": {
+    "side": "roofs/straw-side.jpg",
+    "top": "roofs/straw-top.jpg"
+  }
+}

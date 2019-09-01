@@ -1,0 +1,51 @@
+{
+  "texture": {
+    "maxIndex": 4,
+    "types": {
+      "wood_floor_color.png": 255,
+      "stone_wall.png": 4294967295,
+      "stone_floor.png": 4278190335
+    },
+    "colors": {
+      "0,0,0": "wood_floor_color.png",
+      "255,255,255": "stone_wall.png",
+      "255,0,0": "stone_floor.png"
+    }
+  },
+  "walls": {
+    "maxIndex": 11,
+    "types": {
+      "fence": 255,
+      "plaster5": 4294967295,
+      "plaster": 4278190335,
+      "plaster2": 16711935,
+      "plaster-window": 65535,
+      "stone2": 4294902015,
+      "stone": 4278255615,
+      "stone3": 16777215,
+      "stone-window": 4286578943,
+      "wood_doorframe": 4278223103
+    },
+    "colors": {
+      "0,0,0": "fence-picket",
+      "255,255,255": "plaster-ul-br",
+      "255,0,0": "plaster-base",
+      "0,255,0": "plaster-ur-bl",
+      "0,0,255": "plaster-window",
+      "255,255,0": "brick-left",
+      "255,0,255": "brick-base",
+      "0,255,255": "brick-right",
+      "255,128,0": "brick-window",
+      "255,0,128": "doorframe-wood"
+    }
+  },
+  "roofs": {
+    "maxIndex": 2,
+    "types": {
+      "clay": 255
+    },
+    "colors": {
+      "0,0,0": "clay"
+    }
+  }
+}

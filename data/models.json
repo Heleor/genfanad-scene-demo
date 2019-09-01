@@ -1,0 +1,5557 @@
+{
+  "building-door": {
+    "nick": "Door",
+    "examine": "It's like a wall, but you can open it.",
+    "model": "polygon",
+    "texture": "house/wood_door.png",
+    "minimap": "wall",
+    "shadow": true,
+    "collision": {
+      "tile": "free",
+      "walls": "door"
+    },
+    "position": {
+      "x": 0.5,
+      "y": "0.8",
+      "z": 0
+    },
+    "scale": {
+      "x": "-1",
+      "y": "1",
+      "z": "1"
+    },
+    "actions": [
+      "Open"
+    ],
+    "impl": {
+      "class": "door",
+      "params": ""
+    },
+    "states": {
+      "open": {
+        "actions": [
+          "Close"
+        ],
+        "mod": "open-door"
+      }
+    }
+  },
+  "cooking-range": {
+    "nick": "Range",
+    "examine": "Cook food and keep warm all at once!",
+    "model": "house/range.obj",
+    "texture": "house/range.png",
+    "shadow": true,
+    "position": {
+      "x": 1,
+      "y": "0",
+      "z": 0.5
+    },
+    "scale": {
+      "x": "0.016404199721431978",
+      "y": "0.01",
+      "z": "0.012401654966944564"
+    },
+    "rotation": "0"
+  },
+  "cooking-sink": {
+    "nick": "Sink",
+    "examine": "For all your water needs.",
+    "model": "house/sink.obj",
+    "texture": "house/sink.png",
+    "shadow": true,
+    "position": {
+      "x": 0.8400000000000001,
+      "y": "0",
+      "z": 0.5
+    },
+    "scale": {
+      "x": "0.009112236823609059",
+      "y": "0.008",
+      "z": "0.012498648312836957"
+    },
+    "rotation": "0"
+  },
+  "dungeon-chest": {
+    "nick": "Chest",
+    "examine": "I hope there's treasure here.",
+    "model": "dungeon/chest.obj",
+    "texture": "dungeon/chest.png",
+    "position": {
+      "x": 0.5312353235050323,
+      "y": "0.6057921596948409",
+      "z": 0.5
+    },
+    "scale": {
+      "x": "0.6406523488291663",
+      "y": "0.5885385926310529",
+      "z": "0.463532095060735"
+    },
+    "rotation": "0"
+  },
+  "fence-gate": {
+    "nick": "Gate",
+    "examine": "They did not fight there.",
+    "model": "fence_gate.obj",
+    "texture": "fence_gate.jpg",
+    "position": {
+      "x": 0.5,
+      "y": "0",
+      "z": 1
+    },
+    "scale": {
+      "x": "0.018",
+      "y": "0.03",
+      "z": "0.01"
+    },
+    "rotation": "0"
+  },
+  "fire": {
+    "nick": "Fire",
+    "examine": "I burn!",
+    "model": "outdoor/fire.obj",
+    "texture": "outdoor/fire.png",
+    "collision": {
+      "tile": "free"
+    },
+    "position": {
+      "x": 0.5,
+      "y": "0",
+      "z": 0.5
+    },
+    "scale": {
+      "x": "0.01",
+      "y": "0.01",
+      "z": "0.01"
+    },
+    "rotation": "0"
+  },
+  "fishing-default": {
+    "nick": "Fishing spot",
+    "examine": "You can fish here.",
+    "model": "fishing-spot",
+    "shader": "fishing.glsl",
+    "alphaTest": "0.01",
+    "position": {
+      "x": 0.5,
+      "y": "1.0",
+      "z": 0.5
+    },
+    "scale": {
+      "x": "1.0",
+      "y": "1.0",
+      "z": "1.0"
+    }
+  },
+  "forging-anvil": {
+    "nick": "Anvil",
+    "model": "skills/anvil.obj",
+    "texture": "skills/anvil.jpg",
+    "position": {
+      "x": 0.5,
+      "y": "0",
+      "z": 0.5
+    },
+    "scale": {
+      "x": "0.0115",
+      "y": "0.01",
+      "z": "0.012"
+    },
+    "rotation": "0",
+    "examine": "Metal for making metal by banging metal against metal.",
+    "impl": {
+      "class": "anvil",
+      "params": ""
+    }
+  },
+  "forging-furnace": {
+    "nick": "Furnace",
+    "examine": "Get it while it's hot!",
+    "model": "skills/furnace.obj",
+    "texture": "skills/furnace.jpg",
+    "position": {
+      "x": 0.5,
+      "y": "0",
+      "z": 0.5
+    },
+    "scale": {
+      "x": "0.012124571683079725",
+      "y": "0.01540419842580779",
+      "z": "0.015403869699794803"
+    },
+    "rotation": "0",
+    "impl": {
+      "class": "furnace",
+      "params": ""
+    }
+  },
+  "indoor-shelves": {
+    "nick": "Shelves",
+    "examine": "They hold stuff. That's about it.",
+    "model": "house/shelf.obj",
+    "texture": "house/shelf.png",
+    "shadow": true,
+    "position": {
+      "x": 0.5355417403062162,
+      "y": "0.007346327585103789",
+      "z": 0.3
+    },
+    "scale": {
+      "x": "0.005293888949338009",
+      "y": "0.008",
+      "z": "0.005"
+    },
+    "rotation": "0"
+  },
+  "ladder-down": {
+    "nick": "Ladder",
+    "examine": "This leads down.",
+    "model": "house/ladder.obj",
+    "texture": "house/ladder.png",
+    "shadow": true,
+    "position": {
+      "x": 0.5,
+      "y": "-1.0",
+      "z": 0.5
+    },
+    "scale": {
+      "x": "0.1",
+      "y": "0.1",
+      "z": "0.1"
+    },
+    "rotation": "0",
+    "actions": [
+      "Climb down"
+    ],
+    "impl": {
+      "class": "ladder",
+      "params": "down"
+    }
+  },
+  "ladder-up": {
+    "nick": "Ladder",
+    "examine": "An optimist would say this is going up. A pessimist realizes they have to climb it.",
+    "model": "house/ladder.obj",
+    "texture": "house/ladder.png",
+    "shadow": true,
+    "position": {
+      "x": 0.5,
+      "y": "0.2",
+      "z": 0.5
+    },
+    "scale": {
+      "x": "0.1",
+      "y": "0.14",
+      "z": "0.1"
+    },
+    "rotation": "0",
+    "actions": [
+      "Climb up"
+    ],
+    "impl": {
+      "class": "ladder",
+      "params": "up"
+    }
+  },
+  "piety-altar": {
+    "nick": "Altar",
+    "examine": "Lets you show your piety.",
+    "model": "skills/altar.obj",
+    "texture": "skills/altar.png",
+    "position": {
+      "x": 0.5,
+      "y": "0",
+      "z": 0.5
+    },
+    "scale": {
+      "x": "0.005",
+      "y": "0.005",
+      "z": "0.005"
+    },
+    "rotation": "0"
+  },
+  "plant-bush": {
+    "nick": "Bush",
+    "examine": "There's probably two birds in here.",
+    "model": "outdoor/bush.obj",
+    "texture": "outdoor/bush.png",
+    "shadow": true,
+    "position": {
+      "x": 0.5,
+      "y": "0",
+      "z": 0.5
+    },
+    "scale": {
+      "x": "0.01",
+      "y": "0.01",
+      "z": "0.01"
+    },
+    "rotation": "0"
+  },
+  "plant-fern": {
+    "nick": "Plant",
+    "examine": "What's it fern?",
+    "model": "outdoor/fern.obj",
+    "texture": "outdoor/fern.png",
+    "collision": {
+      "tile": "free"
+    },
+    "position": {
+      "x": 0.5,
+      "y": "0",
+      "z": 0.5
+    },
+    "scale": {
+      "x": "0.0073273629308736165",
+      "y": "0.007",
+      "z": "0.0073273629308736165"
+    },
+    "rotation": "0"
+  },
+  "plant-mushroom": {
+    "nick": "Mushrooms",
+    "examine": "Once the developer implements Botany this might be more interesting.",
+    "model": "plants/mushrooms.obj",
+    "material": "plants/mushrooms.mtl",
+    "position": {
+      "x": 0,
+      "y": "0",
+      "z": 1
+    },
+    "scale": {
+      "x": "1",
+      "y": "1",
+      "z": "1"
+    },
+    "rotation": "0"
+  },
+  "rock-adamantite": {
+    "nick": "Rock (adamantite)",
+    "name": "Rock",
+    "examine": "Might have some useful stuff in it.",
+    "model": "skills/mining_rock.obj",
+    "texture": "skills/mining_rock_rock.png",
+    "color": "#4e7259",
+    "#todo": "Maybe make the actual vein/rock separation?",
+    "shadow": true,
+    "position": {
+      "x": 0.5,
+      "y": "0",
+      "z": 0.5
+    },
+    "scale": {
+      "x": "0.16",
+      "y": "0.16",
+      "z": "0.16"
+    },
+    "rotation": "0",
+    "actions": [
+      "Mine",
+      "Identify"
+    ],
+    "impl": {
+      "class": "rock",
+      "params": "adamantite"
+    },
+    "states": {
+      "empty": {
+        "mod": "color_grey"
+      }
+    }
+  },
+  "rock-clay": {
+    "nick": "Rock (clay)",
+    "name": "Rock",
+    "examine": "Might have some useful stuff in it.",
+    "model": "skills/mining_rock.obj",
+    "texture": "skills/mining_rock_rock.png",
+    "color": "#d1b260",
+    "#todo": "Maybe make the actual vein/rock separation?",
+    "shadow": true,
+    "position": {
+      "x": 0.5,
+      "y": "0",
+      "z": 0.5
+    },
+    "scale": {
+      "x": "0.16",
+      "y": "0.16",
+      "z": "0.16"
+    },
+    "rotation": "0",
+    "actions": [
+      "Mine",
+      "Identify"
+    ],
+    "impl": {
+      "class": "rock",
+      "params": "clay"
+    },
+    "states": {
+      "empty": {
+        "mod": "color_grey"
+      }
+    }
+  },
+  "rock-coal": {
+    "nick": "Rock (coal)",
+    "name": "Rock",
+    "examine": "Might have some useful stuff in it.",
+    "model": "skills/mining_rock.obj",
+    "texture": "skills/mining_rock_rock.png",
+    "color": "#333333",
+    "#todo": "Maybe make the actual vein/rock separation?",
+    "shadow": true,
+    "position": {
+      "x": 0.5,
+      "y": "0",
+      "z": 0.5
+    },
+    "scale": {
+      "x": "0.16",
+      "y": "0.16",
+      "z": "0.16"
+    },
+    "rotation": "0",
+    "actions": [
+      "Mine",
+      "Identify"
+    ],
+    "impl": {
+      "class": "rock",
+      "params": "coal"
+    },
+    "states": {
+      "empty": {
+        "mod": "color_grey"
+      }
+    }
+  },
+  "rock-copper": {
+    "nick": "Rock (copper)",
+    "name": "Rock",
+    "examine": "Might have some useful stuff in it.",
+    "model": "skills/mining_rock.obj",
+    "texture": "skills/mining_rock_rock.png",
+    "color": "#ff8000",
+    "#todo": "Maybe make the actual vein/rock separation?",
+    "shadow": true,
+    "position": {
+      "x": 0.5,
+      "y": "0",
+      "z": 0.5
+    },
+    "scale": {
+      "x": "0.16",
+      "y": "0.16",
+      "z": "0.16"
+    },
+    "rotation": "0",
+    "actions": [
+      "Mine",
+      "Identify"
+    ],
+    "impl": {
+      "class": "rock",
+      "params": "copper"
+    },
+    "states": {
+      "empty": {
+        "mod": "color_grey"
+      }
+    }
+  },
+  "rock-empty": {
+    "nick": "Rock",
+    "examine": "The rumors of precious metals have been greatly exaggerated.",
+    "model": "skills/mining_rock.obj",
+    "texture": "skills/mining_rock_rock.png",
+    "shadow": true,
+    "position": {
+      "x": 0.5,
+      "y": "0",
+      "z": 0.5
+    },
+    "scale": {
+      "x": "0.15",
+      "y": "0.15",
+      "z": "0.15"
+    },
+    "rotation": "0"
+  },
+  "rock-gold": {
+    "nick": "Rock (gold)",
+    "name": "Rock",
+    "examine": "Might have some useful stuff in it.",
+    "model": "skills/mining_rock.obj",
+    "texture": "skills/mining_rock_rock.png",
+    "color": "#ced11d",
+    "#todo": "Maybe make the actual vein/rock separation?",
+    "shadow": true,
+    "position": {
+      "x": 0.5,
+      "y": "0",
+      "z": 0.5
+    },
+    "scale": {
+      "x": "0.16",
+      "y": "0.16",
+      "z": "0.16"
+    },
+    "rotation": "0",
+    "actions": [
+      "Mine",
+      "Identify"
+    ],
+    "impl": {
+      "class": "rock",
+      "params": "gold"
+    },
+    "states": {
+      "empty": {
+        "mod": "color_grey"
+      }
+    }
+  },
+  "rock-iron": {
+    "nick": "Rock (iron)",
+    "name": "Rock",
+    "examine": "Might have some useful stuff in it.",
+    "model": "skills/mining_rock.obj",
+    "texture": "skills/mining_rock_rock.png",
+    "color": "#632f04",
+    "#todo": "Maybe make the actual vein/rock separation?",
+    "shadow": true,
+    "position": {
+      "x": 0.5,
+      "y": "0",
+      "z": 0.5
+    },
+    "scale": {
+      "x": "0.16",
+      "y": "0.16",
+      "z": "0.16"
+    },
+    "rotation": "0",
+    "actions": [
+      "Mine",
+      "Identify"
+    ],
+    "impl": {
+      "class": "rock",
+      "params": "iron"
+    },
+    "states": {
+      "empty": {
+        "mod": "color_grey"
+      }
+    }
+  },
+  "rock-meteor": {
+    "nick": "Rock (meteor)",
+    "name": "Rock",
+    "examine": "Might have some useful stuff in it.",
+    "model": "skills/mining_rock.obj",
+    "texture": "skills/mining_rock_rock.png",
+    "color": "#564d66",
+    "#todo": "Maybe make the actual vein/rock separation?",
+    "shadow": true,
+    "position": {
+      "x": 0.5,
+      "y": "0",
+      "z": 0.5
+    },
+    "scale": {
+      "x": "0.16",
+      "y": "0.16",
+      "z": "0.16"
+    },
+    "rotation": "0",
+    "actions": [
+      "Mine",
+      "Identify"
+    ],
+    "impl": {
+      "class": "rock",
+      "params": "meteor"
+    },
+    "states": {
+      "empty": {
+        "mod": "color_grey"
+      }
+    }
+  },
+  "rock-mithril": {
+    "nick": "Rock (mithril)",
+    "name": "Rock",
+    "examine": "Might have some useful stuff in it.",
+    "model": "skills/mining_rock.obj",
+    "texture": "skills/mining_rock_rock.png",
+    "color": "#98ccea",
+    "#todo": "Maybe make the actual vein/rock separation?",
+    "shadow": true,
+    "position": {
+      "x": 0.5,
+      "y": "0",
+      "z": 0.5
+    },
+    "scale": {
+      "x": "0.16",
+      "y": "0.16",
+      "z": "0.16"
+    },
+    "rotation": "0",
+    "actions": [
+      "Mine",
+      "Identify"
+    ],
+    "impl": {
+      "class": "rock",
+      "params": "mithril"
+    },
+    "states": {
+      "empty": {
+        "mod": "color_grey"
+      }
+    }
+  },
+  "rock-orcite": {
+    "nick": "Rock (orcite)",
+    "name": "Rock",
+    "examine": "Might have some useful stuff in it.",
+    "model": "skills/mining_rock.obj",
+    "texture": "skills/mining_rock_rock.png",
+    "color": "#cba2db",
+    "#todo": "Maybe make the actual vein/rock separation?",
+    "shadow": true,
+    "position": {
+      "x": 0.5,
+      "y": "0",
+      "z": 0.5
+    },
+    "scale": {
+      "x": "0.16",
+      "y": "0.16",
+      "z": "0.16"
+    },
+    "rotation": "0",
+    "actions": [
+      "Mine",
+      "Identify"
+    ],
+    "impl": {
+      "class": "rock",
+      "params": "orcite"
+    },
+    "states": {
+      "empty": {
+        "mod": "color_grey"
+      }
+    }
+  },
+  "rock-silver": {
+    "nick": "Rock (silver)",
+    "name": "Rock",
+    "examine": "Might have some useful stuff in it.",
+    "model": "skills/mining_rock.obj",
+    "texture": "skills/mining_rock_rock.png",
+    "color": "#cecece",
+    "#todo": "Maybe make the actual vein/rock separation?",
+    "shadow": true,
+    "position": {
+      "x": 0.5,
+      "y": "0",
+      "z": 0.5
+    },
+    "scale": {
+      "x": "0.16",
+      "y": "0.16",
+      "z": "0.16"
+    },
+    "rotation": "0",
+    "actions": [
+      "Mine",
+      "Identify"
+    ],
+    "impl": {
+      "class": "rock",
+      "params": "silver"
+    },
+    "states": {
+      "empty": {
+        "mod": "color_grey"
+      }
+    }
+  },
+  "rock-tin": {
+    "nick": "Rock (tin)",
+    "name": "Rock",
+    "examine": "Might have some useful stuff in it.",
+    "model": "skills/mining_rock.obj",
+    "texture": "skills/mining_rock_rock.png",
+    "color": "#dddddd",
+    "shadow": true,
+    "position": {
+      "x": 0.5,
+      "y": "0",
+      "z": 0.5
+    },
+    "scale": {
+      "x": "0.16",
+      "y": "0.16",
+      "z": "0.16"
+    },
+    "rotation": "0",
+    "actions": [
+      "Mine",
+      "Identify"
+    ],
+    "impl": {
+      "class": "rock",
+      "params": "tin"
+    },
+    "states": {
+      "empty": {
+        "mod": "color_grey"
+      }
+    }
+  },
+  "scenery-log-large": {
+    "nick": "Large Stack of Logs",
+    "examine": "Come on and get your log.",
+    "model": "outdoor/logs_stackLarge.obj",
+    "material": "outdoor/logs_stackLarge.mtl",
+    "shadow": true,
+    "position": {
+      "x": 0.5,
+      "y": "0",
+      "z": 0.5
+    },
+    "scale": {
+      "x": "0.1",
+      "y": "0.1",
+      "z": "0.1"
+    },
+    "rotation": "0"
+  },
+  "scenery-log-med": {
+    "nick": "Stack of Logs",
+    "examine": "They're better than bad.",
+    "model": "outdoor/logs_stack.obj",
+    "material": "outdoor/logs_stack.mtl",
+    "shadow": true,
+    "position": {
+      "x": 0.5,
+      "y": "0",
+      "z": 0.5
+    },
+    "scale": {
+      "x": "0.1",
+      "y": "0.1",
+      "z": "0.1"
+    },
+    "rotation": "0"
+  },
+  "scenery-log-small": {
+    "nick": "Log",
+    "examine": "It's big, it's heavy, it's wood.",
+    "model": "outdoor/log_small.obj",
+    "material": "outdoor/log_small.mtl",
+    "shadow": true,
+    "position": {
+      "x": 0.5,
+      "y": "0",
+      "z": 0.5
+    },
+    "scale": {
+      "x": "0.1",
+      "y": "0.1",
+      "z": "0.1"
+    },
+    "rotation": "0"
+  },
+  "scenery-obelisk": {
+    "nick": "Obelisk",
+    "examine": "Looks pretty important.",
+    "model": "outdoor/stone_obelisk.obj",
+    "material": "outdoor/stone_obelisk.mtl",
+    "shadow": true,
+    "position": {
+      "x": 0.5,
+      "y": "0",
+      "z": 0.5
+    },
+    "scale": {
+      "x": "0.5",
+      "y": "0.5",
+      "z": "0.5"
+    },
+    "rotation": "0"
+  },
+  "scenery-sign": {
+    "nick": "Sign",
+    "examine": "Probably informative.",
+    "model": "outdoor/sign.obj",
+    "texture": "outdoor/sign_new.png",
+    "shadow": true,
+    "position": {
+      "x": 0.5,
+      "y": "0",
+      "z": 0.5
+    },
+    "scale": {
+      "x": "0.5",
+      "y": "0.25",
+      "z": "0.5"
+    },
+    "rotation": "0"
+  },
+  "scenery-wornsign": {
+    "nick": "Worn Sign",
+    "examine": "Informative, yet outdated.",
+    "model": "outdoor/sign.obj",
+    "texture": "outdoor/sign_old.png",
+    "shadow": true,
+    "position": {
+      "x": 0.5,
+      "y": "0",
+      "z": 0.5
+    },
+    "scale": {
+      "x": "0.5",
+      "y": "0.25",
+      "z": "0.5"
+    },
+    "rotation": "0"
+  },
+  "town-fountain": {
+    "nick": "Fountain",
+    "examine": "No youth to be found here.",
+    "model": "outdoor/fountain.obj",
+    "texture": "outdoor/fountain.jpg",
+    "collision": {
+      "tile": "2x2"
+    },
+    "position": {
+      "x": 1,
+      "y": "0",
+      "z": 1
+    },
+    "scale": {
+      "x": "0.0172",
+      "y": "0.02",
+      "z": "0.0164"
+    },
+    "rotation": "0",
+    "shadow": true
+  },
+  "town-well": {
+    "nick": "Well",
+    "examine": "actually...",
+    "model": "outdoor/well.obj",
+    "texture": "outdoor/well.png",
+    "shadow": true,
+    "position": {
+      "x": 0.9019166444764343,
+      "y": "0.08389608934698971",
+      "z": 0.9575774673376617
+    },
+    "scale": {
+      "x": "0.5089989596555635",
+      "y": "0.4",
+      "z": "0.5995733959947426"
+    },
+    "rotation": "0"
+  },
+  "tree-birch": {
+    "nick": "Birch Tree",
+    "examine": "What's white and black and green all over?",
+    "model": "trees/birchtree.obj",
+    "texture": "trees/birchtree.png",
+    "shadow": true,
+    "position": {
+      "x": 0.5,
+      "y": "0",
+      "z": 0.5
+    },
+    "scale": {
+      "x": "0.004",
+      "y": "0.004",
+      "z": "0.004"
+    },
+    "rotation": "0"
+  },
+  "tree-dead": {
+    "nick": "Dead Tree",
+    "examine": "It is an ex-tree.",
+    "model": "trees/deadtree.obj",
+    "texture": "trees/deadtree.png",
+    "shadow": true,
+    "position": {
+      "x": 0.7292610756693613,
+      "y": "0.06555972395536237",
+      "z": 0.8363687674251011
+    },
+    "scale": {
+      "x": "0.06825820327160607",
+      "y": "0.04317212648036582",
+      "z": "0.06943147227986331"
+    },
+    "rotation": "0"
+  },
+  "tree-maple": {
+    "nick": "Maple Tree",
+    "examine": "These have a sweet syrup ready to tap.",
+    "model": "trees/mapletree.obj",
+    "texture": "trees/mapletree.png",
+    "shadow": true,
+    "position": {
+      "x": 0.5,
+      "y": "0",
+      "z": 0.5
+    },
+    "scale": {
+      "x": "0.003",
+      "y": "0.003",
+      "z": "0.003"
+    },
+    "rotation": "0"
+  },
+  "tree-oak": {
+    "nick": "Oak Tree",
+    "examine": "From a tiny acorn, to a... Why are the trees as small as people?",
+    "model": "trees/oaktree.obj",
+    "texture": "trees/oaktree.png",
+    "shadow": true,
+    "position": {
+      "x": 0.5,
+      "y": "0",
+      "z": 0.5
+    },
+    "scale": {
+      "x": "0.005",
+      "y": "0.005",
+      "z": "0.005"
+    },
+    "rotation": "0"
+  },
+  "tree-pine": {
+    "nick": "Pine",
+    "examine": "These needles are not for crafting.",
+    "model": "trees/pinetree.obj",
+    "texture": "trees/pinetree.png",
+    "shadow": true,
+    "position": {
+      "x": 0.5,
+      "y": "-0.07",
+      "z": 0.5
+    },
+    "scale": {
+      "x": "0.17",
+      "y": "0.14",
+      "z": "0.17"
+    },
+    "rotation": "0",
+    "actions": [
+      "Chop down"
+    ],
+    "impl": {
+      "class": "tree",
+      "params": "pine"
+    },
+    "states": {
+      "chopped": {
+        "nick": "Stump",
+        "examine": "It is an ex-tree.",
+        "mod": "hide_child_1"
+      }
+    }
+  },
+  "tree-regular": {
+    "nick": "Tree",
+    "examine": "Its bark is better than its bite.",
+    "model": "trees/simpletree.obj",
+    "texture": "trees/simpletree.png",
+    "shadow": true,
+    "position": {
+      "x": 0.5,
+      "y": "0",
+      "z": 0.5
+    },
+    "scale": {
+      "x": "0.02",
+      "y": "0.02",
+      "z": "0.02"
+    },
+    "rotation": "0",
+    "actions": [
+      "Chop down"
+    ],
+    "impl": {
+      "class": "tree",
+      "params": "tree"
+    },
+    "states": {
+      "chopped": {
+        "nick": "Stump",
+        "examine": "It is an ex-tree.",
+        "mod": "hide_child_0"
+      }
+    }
+  },
+  "witch-cauldron": {
+    "nick": "Cauldron",
+    "examine": "Bubble bubble, toil and trouble.",
+    "model": "misc/cauldron.obj",
+    "texture": "misc/cauldron.png",
+    "shadow": true,
+    "position": {
+      "x": 0.5,
+      "y": "0.005501283014268079",
+      "z": 0.5
+    },
+    "scale": {
+      "x": "0.008095539121511218",
+      "y": "0.011091385882562838",
+      "z": "0.009160117344435354"
+    },
+    "rotation": "0"
+  },
+  "world-cave": {
+    "nick": "Cave",
+    "examine": "I bet there's monsters in there.",
+    "model": "outdoor/cave.obj",
+    "texture": "outdoor/cave.png",
+    "position": {
+      "x": 0.5,
+      "y": "0",
+      "z": 0.52
+    },
+    "scale": {
+      "x": "0.004",
+      "y": "0.004",
+      "z": "0.002"
+    },
+    "rotation": "0"
+  },
+  "dungeon-bones-bonepile_01": {
+    "nick": "bonepile_01",
+    "examine": "dungeon-bones-bonepile_01",
+    "model": "imported/SM_Env_BonePile_01.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.36162834077819295,
+      "y": 0.36162834077819295,
+      "z": 0.36162834077819295
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0.0518,
+      "z": 0.5
+    }
+  },
+  "dungeon-bones-bonepile_02": {
+    "nick": "bonepile_02",
+    "examine": "dungeon-bones-bonepile_02",
+    "model": "imported/SM_Env_BonePile_02.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.23942242299622124,
+      "y": 0.23942242299622124,
+      "z": 0.23942242299622124
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0.0343,
+      "z": 0.5
+    }
+  },
+  "dungeon-bones-bonepile_03": {
+    "nick": "bonepile_03",
+    "examine": "dungeon-bones-bonepile_03",
+    "model": "imported/SM_Env_BonePile_03.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.38381880819262904,
+      "y": 0.38381880819262904,
+      "z": 0.38381880819262904
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0.055,
+      "z": 0.5
+    }
+  },
+  "dungeon-bones-bonepile_small_01": {
+    "nick": "bonepile_small_01",
+    "examine": "dungeon-bones-bonepile_small_01",
+    "model": "imported/SM_Env_BonePile_Small_01.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.6644420928567355,
+      "y": 0.6644420928567355,
+      "z": 0.6644420928567355
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0.024,
+      "z": 0.5
+    }
+  },
+  "dungeon-bones-bonepile_small_02": {
+    "nick": "bonepile_small_02",
+    "examine": "dungeon-bones-bonepile_small_02",
+    "model": "imported/SM_Env_BonePile_Small_02.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.7550429532316836,
+      "y": 0.7550429532316836,
+      "z": 0.7550429532316836
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0.0166,
+      "z": 0.5
+    }
+  },
+  "dungeon-bones-bone_cracked_01": {
+    "nick": "bone_cracked_01",
+    "examine": "dungeon-bones-bone_cracked_01",
+    "model": "imported/SM_Env_Bone_Cracked_01.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.17408415914936873,
+      "y": 0.17408415914936873,
+      "z": 0.17408415914936873
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0.5,
+      "z": 0.5
+    }
+  },
+  "dungeon-bones-bone_cracked_02": {
+    "nick": "bone_cracked_02",
+    "examine": "dungeon-bones-bone_cracked_02",
+    "model": "imported/SM_Env_Bone_Cracked_02.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.11673463725990839,
+      "y": 0.11673463725990839,
+      "z": 0.11673463725990839
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0.5,
+      "z": 0.5
+    }
+  },
+  "dungeon-bones-bone_horn_01": {
+    "nick": "bone_horn_01",
+    "examine": "dungeon-bones-bone_horn_01",
+    "model": "imported/SM_Env_Bone_Horn_01.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.13425565468542602,
+      "y": 0.13425565468542602,
+      "z": 0.13425565468542602
+    },
+    "position": {
+      "x": 0.5208,
+      "y": 0.0889,
+      "z": 0.4536
+    }
+  },
+  "dungeon-bones-bone_ribs_01": {
+    "nick": "bone_ribs_01",
+    "examine": "dungeon-bones-bone_ribs_01",
+    "model": "imported/SM_Env_Bone_Ribs_01.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.06780618936078045,
+      "y": 0.06780618936078045,
+      "z": 0.06780618936078045
+    },
+    "position": {
+      "x": 0.5013,
+      "y": 0.0515,
+      "z": 0.4809
+    }
+  },
+  "dungeon-bones-bone_rib_01": {
+    "nick": "bone_rib_01",
+    "examine": "dungeon-bones-bone_rib_01",
+    "model": "imported/SM_Env_Bone_Rib_01.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.13043079609246588,
+      "y": 0.13043079609246588,
+      "z": 0.13043079609246588
+    },
+    "position": {
+      "x": 0.4824,
+      "y": 0.0866,
+      "z": 0.3629
+    }
+  },
+  "dungeon-bones-bone_rib_02": {
+    "nick": "bone_rib_02",
+    "examine": "dungeon-bones-bone_rib_02",
+    "model": "imported/SM_Env_Bone_Rib_02.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.20477871221297356,
+      "y": 0.20477871221297356,
+      "z": 0.20477871221297356
+    },
+    "position": {
+      "x": 0.4962,
+      "y": 0.0535,
+      "z": 0.4972
+    }
+  },
+  "dungeon-bones-bone_rigcage_01": {
+    "nick": "bone_rigcage_01",
+    "examine": "dungeon-bones-bone_rigcage_01",
+    "model": "imported/SM_Env_Bone_Rigcage_01.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.06803555617209549,
+      "y": 0.06803555617209549,
+      "z": 0.06803555617209549
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0.0358,
+      "z": 0.5
+    }
+  },
+  "dungeon-bones-bone_skull_01": {
+    "nick": "bone_skull_01",
+    "examine": "dungeon-bones-bone_skull_01",
+    "model": "imported/SM_Env_Bone_Skull_01.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.08518005360146196,
+      "y": 0.08518005360146196,
+      "z": 0.08518005360146196
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0.1082,
+      "z": 0.2484
+    }
+  },
+  "dungeon-bones-bone_skull_02": {
+    "nick": "bone_skull_02",
+    "examine": "dungeon-bones-bone_skull_02",
+    "model": "imported/SM_Env_Bone_Skull_02.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.08517899838789005,
+      "y": 0.08517899838789005,
+      "z": 0.08517899838789005
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0.3383,
+      "z": 0.497
+    }
+  },
+  "dungeon-bones-bone_skull_jaw_01": {
+    "nick": "bone_skull_jaw_01",
+    "examine": "dungeon-bones-bone_skull_jaw_01",
+    "model": "imported/SM_Env_Bone_Skull_Jaw_01.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.11761349510587785,
+      "y": 0.11761349510587785,
+      "z": 0.11761349510587785
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0.0745,
+      "z": 0.4983
+    }
+  },
+  "dungeon-bones-bone_skull_jaw_02": {
+    "nick": "bone_skull_jaw_02",
+    "examine": "dungeon-bones-bone_skull_jaw_02",
+    "model": "imported/SM_Env_Bone_Skull_Jaw_02.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.06862380083118767,
+      "y": 0.06862380083118767,
+      "z": 0.06862380083118767
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0,
+      "z": 0.5
+    }
+  },
+  "dungeon-bones-bone_spike_01": {
+    "nick": "bone_spike_01",
+    "examine": "dungeon-bones-bone_spike_01",
+    "model": "imported/SM_Env_Bone_Spike_01.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.3456369591720987,
+      "y": 0.3456369591720987,
+      "z": 0.3456369591720987
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0.0038,
+      "z": 0.4276
+    }
+  },
+  "dungeon-bones-bone_spike_02": {
+    "nick": "bone_spike_02",
+    "examine": "dungeon-bones-bone_spike_02",
+    "model": "imported/SM_Env_Bone_Spike_02.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.4065769355234348,
+      "y": 0.4065769355234348,
+      "z": 0.4065769355234348
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0.0044,
+      "z": 0.4911
+    }
+  },
+  "dungeon-bones-bone_spike_03": {
+    "nick": "bone_spike_03",
+    "examine": "dungeon-bones-bone_spike_03",
+    "model": "imported/SM_Env_Bone_Spike_03.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.7013040735389596,
+      "y": 0.7013040735389596,
+      "z": 0.7013040735389596
+    },
+    "position": {
+      "x": 0.3141,
+      "y": 0.0935,
+      "z": 0.2694
+    }
+  },
+  "dungeon-bones-bone_spike_04": {
+    "nick": "bone_spike_04",
+    "examine": "dungeon-bones-bone_spike_04",
+    "model": "imported/SM_Env_Bone_Spike_04.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.2472426215267608,
+      "y": 0.2472426215267608,
+      "z": 0.2472426215267608
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0.0097,
+      "z": 0.4106
+    }
+  },
+  "dungeon-bones-bone_spike_05": {
+    "nick": "bone_spike_05",
+    "examine": "dungeon-bones-bone_spike_05",
+    "model": "imported/SM_Env_Bone_Spike_05.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 1.2733662970837578,
+      "y": 1.2733662970837578,
+      "z": 1.2733662970837578
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0.5,
+      "z": 0.5
+    }
+  },
+  "dungeon-bones-bone_spine_01": {
+    "nick": "bone_spine_01",
+    "examine": "dungeon-bones-bone_spine_01",
+    "model": "imported/SM_Env_Bone_Spine_01.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.038181708016201125,
+      "y": 0.038181708016201125,
+      "z": 0.038181708016201125
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0.125,
+      "z": 0.5
+    }
+  },
+  "dungeon-bones-bone_spine_02": {
+    "nick": "bone_spine_02",
+    "examine": "dungeon-bones-bone_spine_02",
+    "model": "imported/SM_Env_Bone_Spine_02.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.1704478572815196,
+      "y": 0.1704478572815196,
+      "z": 0.1704478572815196
+    },
+    "position": {
+      "x": 0.5177,
+      "y": 0.3082,
+      "z": 0.5108
+    }
+  },
+  "dungeon-bones-bone_spine_03": {
+    "nick": "bone_spine_03",
+    "examine": "dungeon-bones-bone_spine_03",
+    "model": "imported/SM_Env_Bone_Spine_03.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.347876435267295,
+      "y": 0.347876435267295,
+      "z": 0.347876435267295
+    },
+    "position": {
+      "x": 0.4988,
+      "y": 0.2635,
+      "z": 0.5221
+    }
+  },
+  "dungeon-bones-bone_tail_01": {
+    "nick": "bone_tail_01",
+    "examine": "dungeon-bones-bone_tail_01",
+    "model": "imported/SM_Env_Bone_Tail_01.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.032744489456570186,
+      "y": 0.032744489456570186,
+      "z": 0.032744489456570186
+    },
+    "position": {
+      "x": 0.5009,
+      "y": 0,
+      "z": 0.5005
+    }
+  },
+  "dungeon-pillar-broken_01": {
+    "nick": "broken_01",
+    "examine": "dungeon-pillar-broken_01",
+    "model": "imported/SM_Env_Pillar_Broken_01.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 1.0427963663144748,
+      "y": 1.0427963663144748,
+      "z": 1.0427963663144748
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0,
+      "z": 0.5
+    }
+  },
+  "dungeon-pillar-broken_02": {
+    "nick": "broken_02",
+    "examine": "dungeon-pillar-broken_02",
+    "model": "imported/SM_Env_Pillar_Broken_02.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.5954230842312831,
+      "y": 0.5954230842312831,
+      "z": 0.5954230842312831
+    },
+    "position": {
+      "x": 0.4916,
+      "y": 0,
+      "z": 0.4906
+    }
+  },
+  "dungeon-pillar-broken_pile_01": {
+    "nick": "broken_pile_01",
+    "examine": "dungeon-pillar-broken_pile_01",
+    "model": "imported/SM_Env_Pillar_Broken_Pile_01.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.7118901845559074,
+      "y": 0.7118901845559074,
+      "z": 0.7118901845559074
+    },
+    "position": {
+      "x": 0.0318,
+      "y": 0.0206,
+      "z": 0.7614
+    }
+  },
+  "dungeon-pillar-broken_pile_02": {
+    "nick": "broken_pile_02",
+    "examine": "dungeon-pillar-broken_pile_02",
+    "model": "imported/SM_Env_Pillar_Broken_Pile_02.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.36632411588721747,
+      "y": 0.36632411588721747,
+      "z": 0.36632411588721747
+    },
+    "position": {
+      "x": 0.4837,
+      "y": 0.05,
+      "z": 1.0291
+    }
+  },
+  "dungeon-pillar-round_01": {
+    "nick": "round_01",
+    "examine": "dungeon-pillar-round_01",
+    "model": "imported/SM_Env_Pillar_Round_01.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.254750457093299,
+      "y": 0.254750457093299,
+      "z": 0.254750457093299
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0,
+      "z": 0.5
+    }
+  },
+  "dungeon-pillar-round_02": {
+    "nick": "round_02",
+    "examine": "dungeon-pillar-round_02",
+    "model": "imported/SM_Env_Pillar_Round_02.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.2687178117781615,
+      "y": 0.2687178117781615,
+      "z": 0.2687178117781615
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0,
+      "z": 0.5
+    }
+  },
+  "dungeon-pillar-round_03": {
+    "nick": "round_03",
+    "examine": "dungeon-pillar-round_03",
+    "model": "imported/SM_Env_Pillar_Round_03.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.29231722106619473,
+      "y": 0.29231722106619473,
+      "z": 0.29231722106619473
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0,
+      "z": 0.5
+    }
+  },
+  "dungeon-pillar-round_simple_01": {
+    "nick": "round_simple_01",
+    "examine": "dungeon-pillar-round_simple_01",
+    "model": "imported/SM_Env_Pillar_Round_Simple_01.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.25310675986242226,
+      "y": 0.25310675986242226,
+      "z": 0.25310675986242226
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0,
+      "z": 0.5
+    }
+  },
+  "dungeon-pillar-round_simple_02": {
+    "nick": "round_simple_02",
+    "examine": "dungeon-pillar-round_simple_02",
+    "model": "imported/SM_Env_Pillar_Round_Simple_02.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.29043148176487005,
+      "y": 0.29043148176487005,
+      "z": 0.29043148176487005
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0,
+      "z": 0.5
+    }
+  },
+  "dungeon-pillar-round_simple_03": {
+    "nick": "round_simple_03",
+    "examine": "dungeon-pillar-round_simple_03",
+    "model": "imported/SM_Env_Pillar_Round_Simple_03.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.29043148176487005,
+      "y": 0.29043148176487005,
+      "z": 0.29043148176487005
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0,
+      "z": 0.5
+    }
+  },
+  "dungeon-pillar-square_01": {
+    "nick": "square_01",
+    "examine": "dungeon-pillar-square_01",
+    "model": "imported/SM_Env_Pillar_Square_01.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.47692586364342904,
+      "y": 0.47692586364342904,
+      "z": 0.47692586364342904
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0,
+      "z": 0.5
+    }
+  },
+  "dungeon-pillar-square_02": {
+    "nick": "square_02",
+    "examine": "dungeon-pillar-square_02",
+    "model": "imported/SM_Env_Pillar_Square_02.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.3323235201998677,
+      "y": 0.3323235201998677,
+      "z": 0.3323235201998677
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0,
+      "z": 0.5
+    }
+  },
+  "dungeon-pillar-square_03": {
+    "nick": "square_03",
+    "examine": "dungeon-pillar-square_03",
+    "model": "imported/SM_Env_Pillar_Square_03.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.5084393419400113,
+      "y": 0.5084393419400113,
+      "z": 0.5084393419400113
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0,
+      "z": 0.5
+    }
+  },
+  "dungeon-pillar-square_04": {
+    "nick": "square_04",
+    "examine": "dungeon-pillar-square_04",
+    "model": "imported/SM_Env_Pillar_Square_04.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.42875654077226194,
+      "y": 0.42875654077226194,
+      "z": 0.42875654077226194
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0,
+      "z": 0.5
+    }
+  },
+  "dungeon-pillar-square_05": {
+    "nick": "square_05",
+    "examine": "dungeon-pillar-square_05",
+    "model": "imported/SM_Env_Pillar_Square_05.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.3539004870883779,
+      "y": 0.3539004870883779,
+      "z": 0.3539004870883779
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0,
+      "z": 0.5
+    }
+  },
+  "dungeon-pillar-square_06": {
+    "nick": "square_06",
+    "examine": "dungeon-pillar-square_06",
+    "model": "imported/SM_Env_Pillar_Square_06.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.19943809512669297,
+      "y": 0.19943809512669297,
+      "z": 0.19943809512669297
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0,
+      "z": 0.5
+    }
+  },
+  "dungeon-pillar-square_07": {
+    "nick": "square_07",
+    "examine": "dungeon-pillar-square_07",
+    "model": "imported/SM_Env_Pillar_Square_07.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.28168910412298753,
+      "y": 0.28168910412298753,
+      "z": 0.28168910412298753
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0,
+      "z": 0.5
+    }
+  },
+  "dungeon-pillar-square_08": {
+    "nick": "square_08",
+    "examine": "dungeon-pillar-square_08",
+    "model": "imported/SM_Env_Pillar_Square_08.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 1.220466235814727,
+      "y": 1.220466235814727,
+      "z": 1.220466235814727
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0,
+      "z": 0.5
+    }
+  },
+  "dungeon-pillar-square_base_01": {
+    "nick": "square_base_01",
+    "examine": "dungeon-pillar-square_base_01",
+    "model": "imported/SM_Env_Pillar_Square_Base_01.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.2875417347477844,
+      "y": 0.2875417347477844,
+      "z": 0.2875417347477844
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0,
+      "z": 0.5
+    }
+  },
+  "dungeon-pillar-square_round_01": {
+    "nick": "square_round_01",
+    "examine": "dungeon-pillar-square_round_01",
+    "model": "imported/SM_Env_Pillar_Square_Round_01.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.29356418376191895,
+      "y": 0.29356418376191895,
+      "z": 0.29356418376191895
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0,
+      "z": 0.5
+    }
+  },
+  "dungeon-pillar-square_simple_01": {
+    "nick": "square_simple_01",
+    "examine": "dungeon-pillar-square_simple_01",
+    "model": "imported/SM_Env_Pillar_Square_Simple_01.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.4738557140495944,
+      "y": 0.4738557140495944,
+      "z": 0.4738557140495944
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0,
+      "z": 0.5
+    }
+  },
+  "dungeon-pillar-square_simple_02": {
+    "nick": "square_simple_02",
+    "examine": "dungeon-pillar-square_simple_02",
+    "model": "imported/SM_Env_Pillar_Square_Simple_02.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.5118328046160703,
+      "y": 0.5118328046160703,
+      "z": 0.5118328046160703
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0,
+      "z": 0.5
+    }
+  },
+  "dungeon-pillar-square_simple_03": {
+    "nick": "square_simple_03",
+    "examine": "dungeon-pillar-square_simple_03",
+    "model": "imported/SM_Env_Pillar_Square_Simple_03.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.3516147158787639,
+      "y": 0.3516147158787639,
+      "z": 0.3516147158787639
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0,
+      "z": 0.5
+    }
+  },
+  "dungeon-pillar-square_simple_04": {
+    "nick": "square_simple_04",
+    "examine": "dungeon-pillar-square_simple_04",
+    "model": "imported/SM_Env_Pillar_Square_Simple_04.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.2798716100305815,
+      "y": 0.2798716100305815,
+      "z": 0.2798716100305815
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0,
+      "z": 0.5
+    }
+  },
+  "dungeon-pillar-square_simple_05": {
+    "nick": "square_simple_05",
+    "examine": "dungeon-pillar-square_simple_05",
+    "model": "imported/SM_Env_Pillar_Square_Simple_05.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 1.212601847811718,
+      "y": 1.212601847811718,
+      "z": 1.212601847811718
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0,
+      "z": 0.5
+    }
+  },
+  "dungeon-rock-brick_simple_01": {
+    "nick": "brick_simple_01",
+    "examine": "dungeon-rock-brick_simple_01",
+    "model": "imported/SM_Env_Rock_Brick_Simple_01.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 1.466260578513935,
+      "y": 1.466260578513935,
+      "z": 1.466260578513935
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0.0959,
+      "z": 0.5
+    }
+  },
+  "dungeon-rock-brick_simple_02": {
+    "nick": "brick_simple_02",
+    "examine": "dungeon-rock-brick_simple_02",
+    "model": "imported/SM_Env_Rock_Brick_Simple_02.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 1.655127700035964,
+      "y": 1.655127700035964,
+      "z": 1.655127700035964
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0.1076,
+      "z": 0.5
+    }
+  },
+  "dungeon-rock-brick_simple_03": {
+    "nick": "brick_simple_03",
+    "examine": "dungeon-rock-brick_simple_03",
+    "model": "imported/SM_Env_Rock_Brick_Simple_03.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 1.62666158743431,
+      "y": 1.62666158743431,
+      "z": 1.62666158743431
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0.1636,
+      "z": 0.5
+    }
+  },
+  "dungeon-rock-brick_simple_04": {
+    "nick": "brick_simple_04",
+    "examine": "dungeon-rock-brick_simple_04",
+    "model": "imported/SM_Env_Rock_Brick_Simple_04.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 1.62666158743431,
+      "y": 1.62666158743431,
+      "z": 1.62666158743431
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0.1636,
+      "z": 0.5
+    }
+  },
+  "dungeon-rock-brick_simple_05": {
+    "nick": "brick_simple_05",
+    "examine": "dungeon-rock-brick_simple_05",
+    "model": "imported/SM_Env_Rock_Brick_Simple_05.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 1.62666158743431,
+      "y": 1.62666158743431,
+      "z": 1.62666158743431
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0.1636,
+      "z": 0.5
+    }
+  },
+  "dungeon-rock-brick_simple_06": {
+    "nick": "brick_simple_06",
+    "examine": "dungeon-rock-brick_simple_06",
+    "model": "imported/SM_Env_Rock_Brick_Simple_06.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 1.62666158743431,
+      "y": 1.62666158743431,
+      "z": 1.62666158743431
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0.1636,
+      "z": 0.5
+    }
+  },
+  "dungeon-rock-brick_simple_07": {
+    "nick": "brick_simple_07",
+    "examine": "dungeon-rock-brick_simple_07",
+    "model": "imported/SM_Env_Rock_Brick_Simple_07.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 1.6266510205608193,
+      "y": 1.6266510205608193,
+      "z": 1.6266510205608193
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0.1636,
+      "z": 0.5
+    }
+  },
+  "dungeon-rock-brick_simple_08": {
+    "nick": "brick_simple_08",
+    "examine": "dungeon-rock-brick_simple_08",
+    "model": "imported/SM_Env_Rock_Brick_Simple_08.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 1.62666158743431,
+      "y": 1.62666158743431,
+      "z": 1.62666158743431
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0.1636,
+      "z": 0.5
+    }
+  },
+  "dungeon-rock-brick_simple_09": {
+    "nick": "brick_simple_09",
+    "examine": "dungeon-rock-brick_simple_09",
+    "model": "imported/SM_Env_Rock_Brick_Simple_09.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 1.62666158743431,
+      "y": 1.62666158743431,
+      "z": 1.62666158743431
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0.1636,
+      "z": 0.5
+    }
+  },
+  "dungeon-rock-flat_01": {
+    "nick": "flat_01",
+    "examine": "dungeon-rock-flat_01",
+    "model": "imported/SM_Env_Rock_Flat_01.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.155324895094785,
+      "y": 0.155324895094785,
+      "z": 0.155324895094785
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0,
+      "z": 0.5
+    }
+  },
+  "dungeon-rock-flat_02": {
+    "nick": "flat_02",
+    "examine": "dungeon-rock-flat_02",
+    "model": "imported/SM_Env_Rock_Flat_02.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.21492217322117266,
+      "y": 0.21492217322117266,
+      "z": 0.21492217322117266
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0,
+      "z": 0.5
+    }
+  },
+  "dungeon-rock-flat_03": {
+    "nick": "flat_03",
+    "examine": "dungeon-rock-flat_03",
+    "model": "imported/SM_Env_Rock_Flat_03.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.31758554349985707,
+      "y": 0.31758554349985707,
+      "z": 0.31758554349985707
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0,
+      "z": 0.5
+    }
+  },
+  "dungeon-rock-flat_04": {
+    "nick": "flat_04",
+    "examine": "dungeon-rock-flat_04",
+    "model": "imported/SM_Env_Rock_Flat_04.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.2998000905768096,
+      "y": 0.2998000905768096,
+      "z": 0.2998000905768096
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0,
+      "z": 0.5
+    }
+  },
+  "dungeon-rock-flat_05": {
+    "nick": "flat_05",
+    "examine": "dungeon-rock-flat_05",
+    "model": "imported/SM_Env_Rock_Flat_05.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.30934947282011643,
+      "y": 0.30934947282011643,
+      "z": 0.30934947282011643
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0,
+      "z": 0.5
+    }
+  },
+  "dungeon-rock-flat_06": {
+    "nick": "flat_06",
+    "examine": "dungeon-rock-flat_06",
+    "model": "imported/SM_Env_Rock_Flat_06.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.3928322213337673,
+      "y": 0.3928322213337673,
+      "z": 0.3928322213337673
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0,
+      "z": 0.5
+    }
+  },
+  "dungeon-rock-flat_large_01": {
+    "nick": "flat_large_01",
+    "examine": "dungeon-rock-flat_large_01",
+    "model": "imported/SM_Env_Rock_Flat_Large_01.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.21208566021566447,
+      "y": 0.21208566021566447,
+      "z": 0.21208566021566447
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0,
+      "z": 0.5
+    }
+  },
+  "dungeon-rock-flat_large_02": {
+    "nick": "flat_large_02",
+    "examine": "dungeon-rock-flat_large_02",
+    "model": "imported/SM_Env_Rock_Flat_Large_02.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.1294189120151258,
+      "y": 0.1294189120151258,
+      "z": 0.1294189120151258
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0,
+      "z": 0.5
+    }
+  },
+  "dungeon-rock-flat_large_03": {
+    "nick": "flat_large_03",
+    "examine": "dungeon-rock-flat_large_03",
+    "model": "imported/SM_Env_Rock_Flat_Large_03.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.12418402442428562,
+      "y": 0.12418402442428562,
+      "z": 0.12418402442428562
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0,
+      "z": 0.5
+    }
+  },
+  "dungeon-rock-flat_large_04": {
+    "nick": "flat_large_04",
+    "examine": "dungeon-rock-flat_large_04",
+    "model": "imported/SM_Env_Rock_Flat_Large_04.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.0891453413479261,
+      "y": 0.0891453413479261,
+      "z": 0.0891453413479261
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0,
+      "z": 0.5
+    }
+  },
+  "dungeon-rock-flat_platform_01": {
+    "nick": "flat_platform_01",
+    "examine": "dungeon-rock-flat_platform_01",
+    "model": "imported/SM_Env_Rock_Flat_Platform_01.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.16983421657647163,
+      "y": 0.16983421657647163,
+      "z": 0.16983421657647163
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0.9693,
+      "z": 0.5
+    }
+  },
+  "dungeon-rock-flat_platform_02": {
+    "nick": "flat_platform_02",
+    "examine": "dungeon-rock-flat_platform_02",
+    "model": "imported/SM_Env_Rock_Flat_Platform_02.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.16488070640876382,
+      "y": 0.16488070640876382,
+      "z": 0.16488070640876382
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0.9411,
+      "z": 0.5
+    }
+  },
+  "dungeon-rock-flat_platform_03": {
+    "nick": "flat_platform_03",
+    "examine": "dungeon-rock-flat_platform_03",
+    "model": "imported/SM_Env_Rock_Flat_Platform_03.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.16338184714516638,
+      "y": 0.16338184714516638,
+      "z": 0.16338184714516638
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0.9325,
+      "z": 0.5
+    }
+  },
+  "dungeon-rock-flat_platform_04": {
+    "nick": "flat_platform_04",
+    "examine": "dungeon-rock-flat_platform_04",
+    "model": "imported/SM_Env_Rock_Flat_Platform_04.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.16479853765846866,
+      "y": 0.16479853765846866,
+      "z": 0.16479853765846866
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0.9406,
+      "z": 0.5
+    }
+  },
+  "dungeon-rock-flat_platform_05": {
+    "nick": "flat_platform_05",
+    "examine": "dungeon-rock-flat_platform_05",
+    "model": "imported/SM_Env_Rock_Flat_Platform_05.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.1655871489800831,
+      "y": 0.1655871489800831,
+      "z": 0.1655871489800831
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0.9451,
+      "z": 0.5
+    }
+  },
+  "dungeon-rock-flat_platform_06": {
+    "nick": "flat_platform_06",
+    "examine": "dungeon-rock-flat_platform_06",
+    "model": "imported/SM_Env_Rock_Flat_Platform_06.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.16380783751487152,
+      "y": 0.16380783751487152,
+      "z": 0.16380783751487152
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0.9349,
+      "z": 0.5
+    }
+  },
+  "dungeon-rock-flat_platform_large_01": {
+    "nick": "flat_platform_large_01",
+    "examine": "dungeon-rock-flat_platform_large_01",
+    "model": "imported/SM_Env_Rock_Flat_Platform_Large_01.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.10162541387427022,
+      "y": 0.10162541387427022,
+      "z": 0.10162541387427022
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0.6176,
+      "z": 0.5
+    }
+  },
+  "dungeon-rock-flat_platform_large_02": {
+    "nick": "flat_platform_large_02",
+    "examine": "dungeon-rock-flat_platform_large_02",
+    "model": "imported/SM_Env_Rock_Flat_Platform_Large_02.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.12238739075222231,
+      "y": 0.12238739075222231,
+      "z": 0.12238739075222231
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0.7437,
+      "z": 0.5
+    }
+  },
+  "dungeon-rock-flat_platform_large_03": {
+    "nick": "flat_platform_large_03",
+    "examine": "dungeon-rock-flat_platform_large_03",
+    "model": "imported/SM_Env_Rock_Flat_Platform_Large_03.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.1275710672027548,
+      "y": 0.1275710672027548,
+      "z": 0.1275710672027548
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0.7752,
+      "z": 0.5
+    }
+  },
+  "dungeon-rock-flat_platform_large_04": {
+    "nick": "flat_platform_large_04",
+    "examine": "dungeon-rock-flat_platform_large_04",
+    "model": "imported/SM_Env_Rock_Flat_Platform_Large_04.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.15106141268325618,
+      "y": 0.15106141268325618,
+      "z": 0.15106141268325618
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0.918,
+      "z": 0.5
+    }
+  },
+  "dungeon-rock-pebble_01": {
+    "nick": "pebble_01",
+    "examine": "dungeon-rock-pebble_01",
+    "model": "imported/SM_Env_Rock_Pebble_01.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 2.302084102308531,
+      "y": 2.302084102308531,
+      "z": 2.302084102308531
+    },
+    "position": {
+      "x": 0.3222,
+      "y": 0.3966,
+      "z": 0.3931
+    }
+  },
+  "dungeon-rock-pebble_02": {
+    "nick": "pebble_02",
+    "examine": "dungeon-rock-pebble_02",
+    "model": "imported/SM_Env_Rock_Pebble_02.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 3.0799556434820548,
+      "y": 3.0799556434820548,
+      "z": 3.0799556434820548
+    },
+    "position": {
+      "x": 0.4752,
+      "y": 0.3266,
+      "z": 0.466
+    }
+  },
+  "dungeon-rock-pebble_03": {
+    "nick": "pebble_03",
+    "examine": "dungeon-rock-pebble_03",
+    "model": "imported/SM_Env_Rock_Pebble_03.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 4.146469934108567,
+      "y": 4.146469934108567,
+      "z": 4.146469934108567
+    },
+    "position": {
+      "x": 0.4917,
+      "y": 0.4248,
+      "z": 0.4975
+    }
+  },
+  "dungeon-rock-pillar_01": {
+    "nick": "pillar_01",
+    "examine": "dungeon-rock-pillar_01",
+    "model": "imported/SM_Env_Rock_Pillar_01.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.5374708498619163,
+      "y": 0.5374708498619163,
+      "z": 0.5374708498619163
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0.5,
+      "z": 0.5
+    }
+  },
+  "dungeon-rock-pillar_010": {
+    "nick": "pillar_010",
+    "examine": "dungeon-rock-pillar_010",
+    "model": "imported/SM_Env_Rock_Pillar_010.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.7706933047403689,
+      "y": 0.7706933047403689,
+      "z": 0.7706933047403689
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0.2825,
+      "z": 0.5
+    }
+  },
+  "dungeon-rock-pillar_011": {
+    "nick": "pillar_011",
+    "examine": "dungeon-rock-pillar_011",
+    "model": "imported/SM_Env_Rock_Pillar_011.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.6424138305624608,
+      "y": 0.6424138305624608,
+      "z": 0.6424138305624608
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0.4018,
+      "z": 0.5
+    }
+  },
+  "dungeon-rock-pillar_012": {
+    "nick": "pillar_012",
+    "examine": "dungeon-rock-pillar_012",
+    "model": "imported/SM_Env_Rock_Pillar_012.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.53741596356958,
+      "y": 0.53741596356958,
+      "z": 0.53741596356958
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0.4996,
+      "z": 0.5001
+    }
+  },
+  "dungeon-rock-pillar_013": {
+    "nick": "pillar_013",
+    "examine": "dungeon-rock-pillar_013",
+    "model": "imported/SM_Env_Rock_Pillar_013.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.5382809151729352,
+      "y": 0.5382809151729352,
+      "z": 0.5382809151729352
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0.5,
+      "z": 0.5
+    }
+  },
+  "dungeon-rock-pillar_02": {
+    "nick": "pillar_02",
+    "examine": "dungeon-rock-pillar_02",
+    "model": "imported/SM_Env_Rock_Pillar_02.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.5369482153606691,
+      "y": 0.5369482153606691,
+      "z": 0.5369482153606691
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0.5,
+      "z": 0.4966
+    }
+  },
+  "dungeon-rock-pillar_03": {
+    "nick": "pillar_03",
+    "examine": "dungeon-rock-pillar_03",
+    "model": "imported/SM_Env_Rock_Pillar_03.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.5369415821032701,
+      "y": 0.5369415821032701,
+      "z": 0.5369415821032701
+    },
+    "position": {
+      "x": 0.5041,
+      "y": 0.5,
+      "z": 0.5
+    }
+  },
+  "dungeon-rock-pillar_04": {
+    "nick": "pillar_04",
+    "examine": "dungeon-rock-pillar_04",
+    "model": "imported/SM_Env_Rock_Pillar_04.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.5369724298596995,
+      "y": 0.5369724298596995,
+      "z": 0.5369724298596995
+    },
+    "position": {
+      "x": 0.5001,
+      "y": 0.5,
+      "z": 0.5
+    }
+  },
+  "dungeon-rock-pillar_05": {
+    "nick": "pillar_05",
+    "examine": "dungeon-rock-pillar_05",
+    "model": "imported/SM_Env_Rock_Pillar_05.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.6057881651379592,
+      "y": 0.6057881651379592,
+      "z": 0.6057881651379592
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0.5,
+      "z": 0.5
+    }
+  },
+  "dungeon-rock-pillar_06": {
+    "nick": "pillar_06",
+    "examine": "dungeon-rock-pillar_06",
+    "model": "imported/SM_Env_Rock_Pillar_06.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.537062690642076,
+      "y": 0.537062690642076,
+      "z": 0.537062690642076
+    },
+    "position": {
+      "x": 0.4999,
+      "y": 0.5001,
+      "z": 0.5
+    }
+  },
+  "dungeon-rock-pillar_07": {
+    "nick": "pillar_07",
+    "examine": "dungeon-rock-pillar_07",
+    "model": "imported/SM_Env_Rock_Pillar_07.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.5734073258618515,
+      "y": 0.5734073258618515,
+      "z": 0.5734073258618515
+    },
+    "position": {
+      "x": 0.5003,
+      "y": 0.5,
+      "z": 0.5
+    }
+  },
+  "dungeon-rock-pillar_08": {
+    "nick": "pillar_08",
+    "examine": "dungeon-rock-pillar_08",
+    "model": "imported/SM_Env_Rock_Pillar_08.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.5369415821032701,
+      "y": 0.5369415821032701,
+      "z": 0.5369415821032701
+    },
+    "position": {
+      "x": 0.5041,
+      "y": 0.5,
+      "z": 0.5
+    }
+  },
+  "dungeon-rock-pillar_09": {
+    "nick": "pillar_09",
+    "examine": "dungeon-rock-pillar_09",
+    "model": "imported/SM_Env_Rock_Pillar_09.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.537264103361404,
+      "y": 0.537264103361404,
+      "z": 0.537264103361404
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0.5,
+      "z": 0.5
+    }
+  },
+  "dungeon-rock-rectangle_01": {
+    "nick": "rectangle_01",
+    "examine": "dungeon-rock-rectangle_01",
+    "model": "imported/SM_Env_Rock_Rectangle_01.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.48352906829122505,
+      "y": 0.48352906829122505,
+      "z": 0.48352906829122505
+    },
+    "position": {
+      "x": 0.4998,
+      "y": 0.5,
+      "z": 0.5
+    }
+  },
+  "dungeon-rock-rectangle_02": {
+    "nick": "rectangle_02",
+    "examine": "dungeon-rock-rectangle_02",
+    "model": "imported/SM_Env_Rock_Rectangle_02.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.4835669481850721,
+      "y": 0.4835669481850721,
+      "z": 0.4835669481850721
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0.5,
+      "z": 0.5
+    }
+  },
+  "dungeon-rock-rectangle_03": {
+    "nick": "rectangle_03",
+    "examine": "dungeon-rock-rectangle_03",
+    "model": "imported/SM_Env_Rock_Rectangle_03.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.6331021083157082,
+      "y": 0.6331021083157082,
+      "z": 0.6331021083157082
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0.5,
+      "z": 0.4999
+    }
+  },
+  "dungeon-rock-rectangle_04": {
+    "nick": "rectangle_04",
+    "examine": "dungeon-rock-rectangle_04",
+    "model": "imported/SM_Env_Rock_Rectangle_04.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.6331105418208526,
+      "y": 0.6331105418208526,
+      "z": 0.6331105418208526
+    },
+    "position": {
+      "x": 0.4998,
+      "y": 0.5,
+      "z": 0.4998
+    }
+  },
+  "dungeon-rock-rectangle_05": {
+    "nick": "rectangle_05",
+    "examine": "dungeon-rock-rectangle_05",
+    "model": "imported/SM_Env_Rock_Rectangle_05.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.6331614582067492,
+      "y": 0.6331614582067492,
+      "z": 0.6331614582067492
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0.5,
+      "z": 0.4999
+    }
+  },
+  "dungeon-rock-rectangle_06": {
+    "nick": "rectangle_06",
+    "examine": "dungeon-rock-rectangle_06",
+    "model": "imported/SM_Env_Rock_Rectangle_06.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.6331357958980937,
+      "y": 0.6331357958980937,
+      "z": 0.6331357958980937
+    },
+    "position": {
+      "x": 0.5005,
+      "y": 0.5,
+      "z": 0.4998
+    }
+  },
+  "dungeon-rock-rectangle_07": {
+    "nick": "rectangle_07",
+    "examine": "dungeon-rock-rectangle_07",
+    "model": "imported/SM_Env_Rock_Rectangle_07.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.8491141075833006,
+      "y": 0.8491141075833006,
+      "z": 0.8491141075833006
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0.3294,
+      "z": 0.5
+    }
+  },
+  "dungeon-rock-rectangle_08": {
+    "nick": "rectangle_08",
+    "examine": "dungeon-rock-rectangle_08",
+    "model": "imported/SM_Env_Rock_Rectangle_08.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.8491141075833006,
+      "y": 0.8491141075833006,
+      "z": 0.8491141075833006
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0.3294,
+      "z": 0.5
+    }
+  },
+  "dungeon-rock-rounded_01": {
+    "nick": "rounded_01",
+    "examine": "dungeon-rock-rounded_01",
+    "model": "imported/SM_Env_RockPile_Rounded_01.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.49977009144033574,
+      "y": 0.49977009144033574,
+      "z": 0.49977009144033574
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0,
+      "z": 0.5
+    }
+  },
+  "dungeon-rock-rounded_02": {
+    "nick": "rounded_02",
+    "examine": "dungeon-rock-rounded_02",
+    "model": "imported/SM_Env_RockPile_Rounded_02.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.5337555049488905,
+      "y": 0.5337555049488905,
+      "z": 0.5337555049488905
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0,
+      "z": 0.5
+    }
+  },
+  "dungeon-rock-rounded_03": {
+    "nick": "rounded_03",
+    "examine": "dungeon-rock-rounded_03",
+    "model": "imported/SM_Env_RockPile_Rounded_03.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.5875295730850835,
+      "y": 0.5875295730850835,
+      "z": 0.5875295730850835
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0,
+      "z": 0.5
+    }
+  },
+  "dungeon-rock-round_01": {
+    "nick": "round_01",
+    "examine": "dungeon-rock-round_01",
+    "model": "imported/SM_Env_Rock_Round_01.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 1.1234453093514518,
+      "y": 1.1234453093514518,
+      "z": 1.1234453093514518
+    },
+    "position": {
+      "x": 0.4459,
+      "y": 0.4991,
+      "z": 0.5132
+    }
+  },
+  "dungeon-rock-round_02": {
+    "nick": "round_02",
+    "examine": "dungeon-rock-round_02",
+    "model": "imported/SM_Env_Rock_Round_02.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 1.1973366614063368,
+      "y": 1.1973366614063368,
+      "z": 1.1973366614063368
+    },
+    "position": {
+      "x": 0.4945,
+      "y": 0.1917,
+      "z": 0.5274
+    }
+  },
+  "dungeon-rock-round_03": {
+    "nick": "round_03",
+    "examine": "dungeon-rock-round_03",
+    "model": "imported/SM_Env_Rock_Round_03.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 1.1290887045002862,
+      "y": 1.1290887045002862,
+      "z": 1.1290887045002862
+    },
+    "position": {
+      "x": 0.4995,
+      "y": 0.4968,
+      "z": 0.4661
+    }
+  },
+  "dungeon-rock-round_04": {
+    "nick": "round_04",
+    "examine": "dungeon-rock-round_04",
+    "model": "imported/SM_Env_Rock_Round_04.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 1.0910574823228136,
+      "y": 1.0910574823228136,
+      "z": 1.0910574823228136
+    },
+    "position": {
+      "x": 0.492,
+      "y": 0.4809,
+      "z": 0.4975
+    }
+  },
+  "dungeon-rock-spike_01": {
+    "nick": "spike_01",
+    "examine": "dungeon-rock-spike_01",
+    "model": "imported/SM_Env_Rock_Spike_01.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.5517290004655288,
+      "y": 0.5517290004655288,
+      "z": 0.5517290004655288
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0.5,
+      "z": 0.5
+    }
+  },
+  "dungeon-rock-spike_02": {
+    "nick": "spike_02",
+    "examine": "dungeon-rock-spike_02",
+    "model": "imported/SM_Env_Rock_Spike_02.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.5765739213786953,
+      "y": 0.5765739213786953,
+      "z": 0.5765739213786953
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0.5704,
+      "z": 0.5001
+    }
+  },
+  "dungeon-rock-spike_03": {
+    "nick": "spike_03",
+    "examine": "dungeon-rock-spike_03",
+    "model": "imported/SM_Env_Rock_Spike_03.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.4550350374095173,
+      "y": 0.4550350374095173,
+      "z": 0.4550350374095173
+    },
+    "position": {
+      "x": 0.496,
+      "y": 0.3546,
+      "z": 0.4988
+    }
+  },
+  "dungeon-rock-spike_04": {
+    "nick": "spike_04",
+    "examine": "dungeon-rock-spike_04",
+    "model": "imported/SM_Env_Rock_Spike_04.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.7258843110110953,
+      "y": 0.7258843110110953,
+      "z": 0.7258843110110953
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0.5,
+      "z": 0.5
+    }
+  },
+  "dungeon-rock-spike_05": {
+    "nick": "spike_05",
+    "examine": "dungeon-rock-spike_05",
+    "model": "imported/SM_Env_Rock_Spike_05.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 1.0584183646754122,
+      "y": 1.0584183646754122,
+      "z": 1.0584183646754122
+    },
+    "position": {
+      "x": 0.4892,
+      "y": 0.1603,
+      "z": 0.4911
+    }
+  },
+  "dungeon-rock-square_01": {
+    "nick": "square_01",
+    "examine": "dungeon-rock-square_01",
+    "model": "imported/SM_Env_RockPile_Square_01.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.2462205189323046,
+      "y": 0.2462205189323046,
+      "z": 0.2462205189323046
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0,
+      "z": 0.5
+    }
+  },
+  "dungeon-rock-square_02": {
+    "nick": "square_02",
+    "examine": "dungeon-rock-square_02",
+    "model": "imported/SM_Env_RockPile_Square_02.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.4535635028309438,
+      "y": 0.4535635028309438,
+      "z": 0.4535635028309438
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0,
+      "z": 0.5
+    }
+  },
+  "dungeon-rock-square_03": {
+    "nick": "square_03",
+    "examine": "dungeon-rock-square_03",
+    "model": "imported/SM_Env_RockPile_Square_03.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.44583246481670585,
+      "y": 0.44583246481670585,
+      "z": 0.44583246481670585
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0,
+      "z": 0.5
+    }
+  },
+  "dungeon-rock-square_04": {
+    "nick": "square_04",
+    "examine": "dungeon-rock-square_04",
+    "model": "imported/SM_Env_RockPile_Square_04.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.4349948191246535,
+      "y": 0.4349948191246535,
+      "z": 0.4349948191246535
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0,
+      "z": 0.5
+    }
+  },
+  "dungeon-rock-square_05": {
+    "nick": "square_05",
+    "examine": "dungeon-rock-square_05",
+    "model": "imported/SM_Env_RockPile_Square_05.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.4423547725555316,
+      "y": 0.4423547725555316,
+      "z": 0.4423547725555316
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0,
+      "z": 0.5
+    }
+  },
+  "dungeon-rock-square_06": {
+    "nick": "square_06",
+    "examine": "dungeon-rock-square_06",
+    "model": "imported/SM_Env_RockPile_Square_06.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.36826254707266326,
+      "y": 0.36826254707266326,
+      "z": 0.36826254707266326
+    },
+    "position": {
+      "x": 0.4883,
+      "y": 0,
+      "z": 0.5
+    }
+  },
+  "dungeon-rock-square_simple_01": {
+    "nick": "square_simple_01",
+    "examine": "dungeon-rock-square_simple_01",
+    "model": "imported/SM_Env_Rock_Square_Simple_01.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 2.477430634644229,
+      "y": 2.477430634644229,
+      "z": 2.477430634644229
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0.5,
+      "z": 0.5
+    }
+  },
+  "dungeon-rock-square_simple_02": {
+    "nick": "square_simple_02",
+    "examine": "dungeon-rock-square_simple_02",
+    "model": "imported/SM_Env_Rock_Square_Simple_02.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 2.477430634644229,
+      "y": 2.477430634644229,
+      "z": 2.477430634644229
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0.5,
+      "z": 0.5
+    }
+  },
+  "dungeon-statue-01": {
+    "nick": "01",
+    "examine": "dungeon-statue-01",
+    "model": "imported/SM_Env_Statue_01.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.22327906849230478,
+      "y": 0.22327906849230478,
+      "z": 0.22327906849230478
+    },
+    "position": {
+      "x": 0.5601,
+      "y": 0,
+      "z": 0.3468
+    }
+  },
+  "dungeon-statue-02": {
+    "nick": "02",
+    "examine": "dungeon-statue-02",
+    "model": "imported/SM_Env_Statue_02.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.3324733303422943,
+      "y": 0.3324733303422943,
+      "z": 0.3324733303422943
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0,
+      "z": 0.5
+    }
+  },
+  "dungeon-statue-03": {
+    "nick": "03",
+    "examine": "dungeon-statue-03",
+    "model": "imported/SM_Env_Statue_03.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.3012729764151387,
+      "y": 0.3012729764151387,
+      "z": 0.3012729764151387
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0,
+      "z": 0.5
+    }
+  },
+  "dungeon-statue-04": {
+    "nick": "04",
+    "examine": "dungeon-statue-04",
+    "model": "imported/SM_Env_Statue_04.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.3318305895820147,
+      "y": 0.3318305895820147,
+      "z": 0.3318305895820147
+    },
+    "position": {
+      "x": 0.4963,
+      "y": 0.0017,
+      "z": 0.4662
+    }
+  },
+  "dungeon-torch-torch": {
+    "nick": "torch",
+    "examine": "dungeon-torch-torch",
+    "model": "imported/SM_Prop_Torch_Ornate_02.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.4,
+      "y": 0.4,
+      "z": 0.4
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0.6794,
+      "z": 0.0731
+    }
+  },
+  "environment-plant-adventure-bush_01": {
+    "nick": "bush_01",
+    "examine": "environment-plant-adventure-bush_01",
+    "model": "imported/SM_Env_Bush_01.obj",
+    "texture": "shared-textures/adventure/01.png",
+    "scale": {
+      "x": 0.00480683471811482,
+      "y": 0.00480683471811482,
+      "z": 0.00480683471811482
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0,
+      "z": 0.5
+    }
+  },
+  "environment-plant-adventure-bush_02": {
+    "nick": "bush_02",
+    "examine": "environment-plant-adventure-bush_02",
+    "model": "imported/SM_Env_Bush_02.obj",
+    "texture": "shared-textures/adventure/01.png",
+    "scale": {
+      "x": 0.004900742368116078,
+      "y": 0.004900742368116078,
+      "z": 0.004900742368116078
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0,
+      "z": 0.5
+    }
+  },
+  "environment-plant-adventure-bush_03": {
+    "nick": "bush_03",
+    "examine": "environment-plant-adventure-bush_03",
+    "model": "imported/SM_Env_Bush_03.obj",
+    "texture": "shared-textures/adventure/01.png",
+    "scale": {
+      "x": 0.0065616892505080265,
+      "y": 0.0065616892505080265,
+      "z": 0.0065616892505080265
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0,
+      "z": 0.5
+    }
+  },
+  "environment-plant-adventure-bush_04": {
+    "nick": "bush_04",
+    "examine": "environment-plant-adventure-bush_04",
+    "model": "imported/SM_Env_Bush_04.obj",
+    "texture": "shared-textures/adventure/01.png",
+    "scale": {
+      "x": 0.007724476995412295,
+      "y": 0.007724476995412295,
+      "z": 0.007724476995412295
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0,
+      "z": 0.5
+    }
+  },
+  "environment-plant-adventure-flower_01": {
+    "nick": "flower_01",
+    "examine": "environment-plant-adventure-flower_01",
+    "model": "imported/SM_Env_Flower_01.obj",
+    "texture": "shared-textures/adventure/01.png",
+    "scale": {
+      "x": 0.031164437751073245,
+      "y": 0.031164437751073245,
+      "z": 0.031164437751073245
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0,
+      "z": 0.5
+    }
+  },
+  "environment-plant-adventure-flower_02": {
+    "nick": "flower_02",
+    "examine": "environment-plant-adventure-flower_02",
+    "model": "imported/SM_Env_Flower_02.obj",
+    "texture": "shared-textures/adventure/01.png",
+    "scale": {
+      "x": 0.02561133626773765,
+      "y": 0.02561133626773765,
+      "z": 0.02561133626773765
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0,
+      "z": 0.5
+    }
+  },
+  "environment-plant-adventure-flower_03": {
+    "nick": "flower_03",
+    "examine": "environment-plant-adventure-flower_03",
+    "model": "imported/SM_Env_Flower_03.obj",
+    "texture": "shared-textures/adventure/01.png",
+    "scale": {
+      "x": 0.02028891016764294,
+      "y": 0.02028891016764294,
+      "z": 0.02028891016764294
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0,
+      "z": 0.5
+    }
+  },
+  "environment-plant-adventure-flower_04": {
+    "nick": "flower_04",
+    "examine": "environment-plant-adventure-flower_04",
+    "model": "imported/SM_Env_Flower_04.obj",
+    "texture": "shared-textures/adventure/01.png",
+    "scale": {
+      "x": 0.018704557551990797,
+      "y": 0.018704557551990797,
+      "z": 0.018704557551990797
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0,
+      "z": 0.5
+    }
+  },
+  "environment-plant-adventure-flower_05": {
+    "nick": "flower_05",
+    "examine": "environment-plant-adventure-flower_05",
+    "model": "imported/SM_Env_Flower_05.obj",
+    "texture": "shared-textures/adventure/01.png",
+    "scale": {
+      "x": 0.02028891016764294,
+      "y": 0.02028891016764294,
+      "z": 0.02028891016764294
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0,
+      "z": 0.5
+    }
+  },
+  "environment-plant-adventure-flower_06": {
+    "nick": "flower_06",
+    "examine": "environment-plant-adventure-flower_06",
+    "model": "imported/SM_Env_Flower_06.obj",
+    "texture": "shared-textures/adventure/01.png",
+    "scale": {
+      "x": 0.025611316250036455,
+      "y": 0.025611316250036455,
+      "z": 0.025611316250036455
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0,
+      "z": 0.5
+    }
+  },
+  "environment-plant-adventure-flower_07": {
+    "nick": "flower_07",
+    "examine": "environment-plant-adventure-flower_07",
+    "model": "imported/SM_Env_Flower_07.obj",
+    "texture": "shared-textures/adventure/01.png",
+    "scale": {
+      "x": 0.018704557551990797,
+      "y": 0.018704557551990797,
+      "z": 0.018704557551990797
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0,
+      "z": 0.5
+    }
+  },
+  "environment-plant-adventure-flower_08": {
+    "nick": "flower_08",
+    "examine": "environment-plant-adventure-flower_08",
+    "model": "imported/SM_Env_Flower_08.obj",
+    "texture": "shared-textures/adventure/01.png",
+    "scale": {
+      "x": 0.031164437751073245,
+      "y": 0.031164437751073245,
+      "z": 0.031164437751073245
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0,
+      "z": 0.5
+    }
+  },
+  "environment-plant-adventure-grass_01": {
+    "nick": "grass_01",
+    "examine": "environment-plant-adventure-grass_01",
+    "model": "imported/SM_Env_Grass_01.obj",
+    "texture": "shared-textures/adventure/01.png",
+    "scale": {
+      "x": 0.032646073038340495,
+      "y": 0.032646073038340495,
+      "z": 0.032646073038340495
+    },
+    "position": {
+      "x": 0.3633,
+      "y": 0.1979,
+      "z": 0.3771
+    }
+  },
+  "environment-plant-adventure-grass_02": {
+    "nick": "grass_02",
+    "examine": "environment-plant-adventure-grass_02",
+    "model": "imported/SM_Env_Grass_02.obj",
+    "texture": "shared-textures/adventure/01.png",
+    "scale": {
+      "x": 0.028661818336876737,
+      "y": 0.028661818336876737,
+      "z": 0.028661818336876737
+    },
+    "position": {
+      "x": 0.4585,
+      "y": 0.1943,
+      "z": 0.3083
+    }
+  },
+  "environment-plant-adventure-lillypads_01": {
+    "nick": "lillypads_01",
+    "examine": "environment-plant-adventure-lillypads_01",
+    "model": "imported/SM_Env_Lillypads_01.obj",
+    "texture": "shared-textures/adventure/01.png",
+    "scale": {
+      "x": 0.01159503573378551,
+      "y": 0.01159503573378551,
+      "z": 0.01159503573378551
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0,
+      "z": 0.5
+    }
+  },
+  "environment-plant-adventure-lillypads_02": {
+    "nick": "lillypads_02",
+    "examine": "environment-plant-adventure-lillypads_02",
+    "model": "imported/SM_Env_Lillypads_02.obj",
+    "texture": "shared-textures/adventure/01.png",
+    "scale": {
+      "x": 0.0061354586745926325,
+      "y": 0.0061354586745926325,
+      "z": 0.0061354586745926325
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0,
+      "z": 0.5
+    }
+  },
+  "environment-plant-adventure-lillypads_03": {
+    "nick": "lillypads_03",
+    "examine": "environment-plant-adventure-lillypads_03",
+    "model": "imported/SM_Env_Lillypads_03.obj",
+    "texture": "shared-textures/adventure/01.png",
+    "scale": {
+      "x": 0.004697883429179637,
+      "y": 0.004697883429179637,
+      "z": 0.004697883429179637
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0,
+      "z": 0.5
+    }
+  },
+  "environment-plant-adventure-mushroom_01": {
+    "nick": "mushroom_01",
+    "examine": "environment-plant-adventure-mushroom_01",
+    "model": "imported/SM_Env_Mushroom_01.obj",
+    "texture": "shared-textures/adventure/01.png",
+    "scale": {
+      "x": 0.015933101202519305,
+      "y": 0.015933101202519305,
+      "z": 0.015933101202519305
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0.1025,
+      "z": 0.4996
+    }
+  },
+  "environment-plant-adventure-plant_01": {
+    "nick": "plant_01",
+    "examine": "environment-plant-adventure-plant_01",
+    "model": "imported/SM_Env_Plant_01.obj",
+    "texture": "shared-textures/adventure/01.png",
+    "scale": {
+      "x": 0.01108196342644312,
+      "y": 0.01108196342644312,
+      "z": 0.01108196342644312
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0,
+      "z": 0.5
+    }
+  },
+  "environment-plant-adventure-plant_02": {
+    "nick": "plant_02",
+    "examine": "environment-plant-adventure-plant_02",
+    "model": "imported/SM_Env_Plant_02.obj",
+    "texture": "shared-textures/adventure/01.png",
+    "scale": {
+      "x": 0.012290393938294293,
+      "y": 0.012290393938294293,
+      "z": 0.012290393938294293
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0,
+      "z": 0.5
+    }
+  },
+  "environment-plant-adventure-plant_03": {
+    "nick": "plant_03",
+    "examine": "environment-plant-adventure-plant_03",
+    "model": "imported/SM_Env_Plant_03.obj",
+    "texture": "shared-textures/adventure/01.png",
+    "scale": {
+      "x": 0.0141365668371578,
+      "y": 0.0141365668371578,
+      "z": 0.0141365668371578
+    },
+    "position": {
+      "x": 0.5172,
+      "y": 0.0953,
+      "z": 0.5697
+    }
+  },
+  "environment-plant-adventure-plant_04": {
+    "nick": "plant_04",
+    "examine": "environment-plant-adventure-plant_04",
+    "model": "imported/SM_Env_Plant_04.obj",
+    "texture": "shared-textures/adventure/01.png",
+    "scale": {
+      "x": 0.011694472623645726,
+      "y": 0.011694472623645726,
+      "z": 0.011694472623645726
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0,
+      "z": 0.5
+    }
+  },
+  "environment-plant-adventure-plant_05": {
+    "nick": "plant_05",
+    "examine": "environment-plant-adventure-plant_05",
+    "model": "imported/SM_Env_Plant_05.obj",
+    "texture": "shared-textures/adventure/01.png",
+    "scale": {
+      "x": 0.010101340944687159,
+      "y": 0.010101340944687159,
+      "z": 0.010101340944687159
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0,
+      "z": 0.5
+    }
+  },
+  "environment-plant-dungeon-mushroom_giant_01": {
+    "nick": "mushroom_giant_01",
+    "examine": "environment-plant-dungeon-mushroom_giant_01",
+    "model": "imported/SM_Env_Mushroom_Giant_01.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.299228468847466,
+      "y": 0.299228468847466,
+      "z": 0.299228468847466
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0,
+      "z": 0.5
+    }
+  },
+  "environment-plant-dungeon-mushroom_giant_02": {
+    "nick": "mushroom_giant_02",
+    "examine": "environment-plant-dungeon-mushroom_giant_02",
+    "model": "imported/SM_Env_Mushroom_Giant_02.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.3463735004498751,
+      "y": 0.3463735004498751,
+      "z": 0.3463735004498751
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0.1018,
+      "z": 0.5
+    }
+  },
+  "environment-plant-dungeon-mushroom_giant_03": {
+    "nick": "mushroom_giant_03",
+    "examine": "environment-plant-dungeon-mushroom_giant_03",
+    "model": "imported/SM_Env_Mushroom_Giant_03.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.5306481161617641,
+      "y": 0.5306481161617641,
+      "z": 0.5306481161617641
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0,
+      "z": 0.5
+    }
+  },
+  "environment-plant-dungeon-mushroom_giant_04": {
+    "nick": "mushroom_giant_04",
+    "examine": "environment-plant-dungeon-mushroom_giant_04",
+    "model": "imported/SM_Env_Mushroom_Giant_04.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.49173997680524895,
+      "y": 0.49173997680524895,
+      "z": 0.49173997680524895
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0,
+      "z": 0.5
+    }
+  },
+  "environment-plant-dungeon-mushroom_giant_05": {
+    "nick": "mushroom_giant_05",
+    "examine": "environment-plant-dungeon-mushroom_giant_05",
+    "model": "imported/SM_Env_Mushroom_Giant_05.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.33994665639606153,
+      "y": 0.33994665639606153,
+      "z": 0.33994665639606153
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0,
+      "z": 0.5
+    }
+  },
+  "environment-plant-dungeon-mushroom_small_01": {
+    "nick": "mushroom_small_01",
+    "examine": "environment-plant-dungeon-mushroom_small_01",
+    "model": "imported/SM_Env_Mushroom_Small_01.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.6992395778926274,
+      "y": 0.6992395778926274,
+      "z": 0.6992395778926274
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0,
+      "z": 0.5
+    }
+  },
+  "environment-plant-dungeon-mushroom_small_02": {
+    "nick": "mushroom_small_02",
+    "examine": "environment-plant-dungeon-mushroom_small_02",
+    "model": "imported/SM_Env_Mushroom_Small_02.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 1.2103548248326665,
+      "y": 1.2103548248326665,
+      "z": 1.2103548248326665
+    },
+    "position": {
+      "x": 0.4375,
+      "y": 0,
+      "z": 0.4498
+    }
+  },
+  "environment-plant-dungeon-mushroom_small_03": {
+    "nick": "mushroom_small_03",
+    "examine": "environment-plant-dungeon-mushroom_small_03",
+    "model": "imported/SM_Env_Mushroom_Small_03.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 1.2180238197292779,
+      "y": 1.2180238197292779,
+      "z": 1.2180238197292779
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0.5,
+      "z": 0.6128
+    }
+  },
+  "environment-plant-dungeon-mushroom_small_04": {
+    "nick": "mushroom_small_04",
+    "examine": "environment-plant-dungeon-mushroom_small_04",
+    "model": "imported/SM_Env_Mushroom_Small_04.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 1.242245303748279,
+      "y": 1.242245303748279,
+      "z": 1.242245303748279
+    },
+    "position": {
+      "x": 0.43,
+      "y": 0.5,
+      "z": 0.5534
+    }
+  },
+  "environment-plant-dungeon-mushroom_wall_01": {
+    "nick": "mushroom_wall_01",
+    "examine": "environment-plant-dungeon-mushroom_wall_01",
+    "model": "imported/SM_Env_Mushroom_Wall_01.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.8291674592757102,
+      "y": 0.8291674592757102,
+      "z": 0.8291674592757102
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0.5,
+      "z": 0.2298
+    }
+  },
+  "environment-plant-dungeon-mushroom_wall_02": {
+    "nick": "mushroom_wall_02",
+    "examine": "environment-plant-dungeon-mushroom_wall_02",
+    "model": "imported/SM_Env_Mushroom_Wall_02.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 1.6752775376003948,
+      "y": 1.6752775376003948,
+      "z": 1.6752775376003948
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0.3506,
+      "z": 0.189
+    }
+  },
+  "environment-plant-dungeon-mushroom_wall_03": {
+    "nick": "mushroom_wall_03",
+    "examine": "environment-plant-dungeon-mushroom_wall_03",
+    "model": "imported/SM_Env_Mushroom_Wall_03.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.7051077182433062,
+      "y": 0.7051077182433062,
+      "z": 0.7051077182433062
+    },
+    "position": {
+      "x": 0.5108,
+      "y": 0.2499,
+      "z": 0.1332
+    }
+  },
+  "environment-plant-dungeon-tree_dandelion_01": {
+    "nick": "tree_dandelion_01",
+    "examine": "environment-plant-dungeon-tree_dandelion_01",
+    "model": "imported/SM_Env_Tree_Dandelion_01.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.11760414964793425,
+      "y": 0.11760414964793425,
+      "z": 0.11760414964793425
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0.0377,
+      "z": 0.5
+    }
+  },
+  "environment-plant-dungeon-tree_dandelion_02": {
+    "nick": "tree_dandelion_02",
+    "examine": "environment-plant-dungeon-tree_dandelion_02",
+    "model": "imported/SM_Env_Tree_Dandelion_02.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.1599844627210987,
+      "y": 0.1599844627210987,
+      "z": 0.1599844627210987
+    },
+    "position": {
+      "x": 0.518,
+      "y": 0.0512,
+      "z": 0.5624
+    }
+  },
+  "environment-plant-dungeon-tree_dandelion_03": {
+    "nick": "tree_dandelion_03",
+    "examine": "environment-plant-dungeon-tree_dandelion_03",
+    "model": "imported/SM_Env_Tree_Dandelion_03.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.2132223884565272,
+      "y": 0.2132223884565272,
+      "z": 0.2132223884565272
+    },
+    "position": {
+      "x": 0.5002,
+      "y": 0,
+      "z": 0.5015
+    }
+  },
+  "environment-plant-dungeon-tree_twisted_01": {
+    "nick": "tree_twisted_01",
+    "examine": "environment-plant-dungeon-tree_twisted_01",
+    "model": "imported/SM_Env_Tree_Twisted_01.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.17310163164346437,
+      "y": 0.17310163164346437,
+      "z": 0.17310163164346437
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0.0269,
+      "z": 0.5008
+    }
+  },
+  "environment-plant-dungeon-tree_twisted_02": {
+    "nick": "tree_twisted_02",
+    "examine": "environment-plant-dungeon-tree_twisted_02",
+    "model": "imported/SM_Env_Tree_Twisted_02.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.24516245840551762,
+      "y": 0.24516245840551762,
+      "z": 0.24516245840551762
+    },
+    "position": {
+      "x": 0.5175,
+      "y": 0.0367,
+      "z": 0.431
+    }
+  },
+  "environment-plant-dungeon-vine_spikes_01": {
+    "nick": "vine_spikes_01",
+    "examine": "environment-plant-dungeon-vine_spikes_01",
+    "model": "imported/SM_Env_Vine_Spikes_01.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.31137126989950586,
+      "y": 0.31137126989950586,
+      "z": 0.31137126989950586
+    },
+    "position": {
+      "x": 0.5271,
+      "y": 0,
+      "z": 0.0961
+    }
+  },
+  "environment-plant-dungeon-vine_spikes_02": {
+    "nick": "vine_spikes_02",
+    "examine": "environment-plant-dungeon-vine_spikes_02",
+    "model": "imported/SM_Env_Vine_Spikes_02.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.4188911614079196,
+      "y": 0.4188911614079196,
+      "z": 0.4188911614079196
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0,
+      "z": 0.5
+    }
+  },
+  "environment-plant-dungeon-vine_spikes_03": {
+    "nick": "vine_spikes_03",
+    "examine": "environment-plant-dungeon-vine_spikes_03",
+    "model": "imported/SM_Env_Vine_Spikes_03.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.18382417098730175,
+      "y": 0.18382417098730175,
+      "z": 0.18382417098730175
+    },
+    "position": {
+      "x": 0.5159,
+      "y": 0.9245,
+      "z": 0.4042
+    }
+  },
+  "graveyard-coffin": {
+    "nick": "coffin",
+    "examine": "graveyard-coffin",
+    "model": "imported/SM_Prop_Coffin_01.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.8400152749931868,
+      "y": 0.8400152749931868,
+      "z": 0.8400152749931868
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0,
+      "z": 1.0149
+    }
+  },
+  "graveyard-coffin_lid": {
+    "nick": "coffin_lid",
+    "examine": "graveyard-coffin_lid",
+    "model": "imported/SM_Prop_Coffin_Lid_01.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.8400152749931868,
+      "y": 0.8400152749931868,
+      "z": 0.8400152749931868
+    },
+    "position": {
+      "x": 0.5014,
+      "y": -0.3934,
+      "z": 1.0149
+    }
+  },
+  "graveyard-grave_1": {
+    "nick": "grave_1",
+    "examine": "graveyard-grave_1",
+    "model": "imported/SM_Env_Grave_01.obj",
+    "texture": "shared-textures/western/01.png",
+    "scale": {
+      "x": 0.00907796113468454,
+      "y": 0.00907796113468454,
+      "z": 0.00907796113468454
+    },
+    "position": {
+      "x": 0.5439,
+      "y": 0.0286,
+      "z": 0.7112
+    }
+  },
+  "graveyard-grave_2": {
+    "nick": "grave_2",
+    "examine": "graveyard-grave_2",
+    "model": "imported/SM_Prop_Gravestone_01.obj",
+    "texture": "shared-textures/knights/Texture_01.png",
+    "scale": {
+      "x": 0.007533298718352955,
+      "y": 0.007533298718352955,
+      "z": 0.007533298718352955
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0,
+      "z": 0.4893
+    }
+  },
+  "graveyard-grave_3": {
+    "nick": "grave_3",
+    "examine": "graveyard-grave_3",
+    "model": "imported/SM_Prop_Gravestone_02.obj",
+    "texture": "shared-textures/knights/Texture_01.png",
+    "scale": {
+      "x": 0.011086944575072663,
+      "y": 0.011086944575072663,
+      "z": 0.011086944575072663
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0,
+      "z": 0.5
+    }
+  },
+  "graveyard-grave_4": {
+    "nick": "grave_4",
+    "examine": "graveyard-grave_4",
+    "model": "imported/SM_Prop_Grave_01.obj",
+    "texture": "shared-textures/pirate/Texture_01_A.png",
+    "scale": {
+      "x": 0.9345095327991523,
+      "y": 0.9345095327991523,
+      "z": 0.9345095327991523
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0,
+      "z": 0.5
+    }
+  },
+  "graveyard-grave_5": {
+    "nick": "grave_5",
+    "examine": "graveyard-grave_5",
+    "model": "imported/SM_Prop_Grave_02.obj",
+    "texture": "shared-textures/knights/Texture_01.png",
+    "scale": {
+      "x": 0.848917329358783,
+      "y": 0.848917329358783,
+      "z": 0.848917329358783
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0,
+      "z": 0.5
+    }
+  },
+  "graveyard-grave_6": {
+    "nick": "grave_6",
+    "examine": "graveyard-grave_6",
+    "model": "imported/SM_Prop_Grave_03.obj",
+    "texture": "shared-textures/knights/Texture_01.png",
+    "scale": {
+      "x": 1.0406888791570883,
+      "y": 1.0406888791570883,
+      "z": 1.0406888791570883
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0,
+      "z": 0.5
+    }
+  },
+  "graveyard-grave_7": {
+    "nick": "grave_7",
+    "examine": "graveyard-grave_7",
+    "model": "imported/SM_Prop_Grave_04.obj",
+    "texture": "shared-textures/knights/Texture_01.png",
+    "scale": {
+      "x": 0.4535974461957136,
+      "y": 0.4535974461957136,
+      "z": 0.4535974461957136
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0,
+      "z": 0.5
+    }
+  },
+  "monster-goblin-branch_01": {
+    "nick": "branch_01",
+    "examine": "monster-goblin-branch_01",
+    "model": "imported/SM_Prop_Goblin_Branch_01.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.4,
+      "y": 0.4,
+      "z": 0.4
+    },
+    "position": {
+      "x": 0.427,
+      "y": 0,
+      "z": 0.4997
+    }
+  },
+  "monster-goblin-branch_02": {
+    "nick": "branch_02",
+    "examine": "monster-goblin-branch_02",
+    "model": "imported/SM_Prop_Goblin_Branch_02.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.4,
+      "y": 0.4,
+      "z": 0.4
+    },
+    "position": {
+      "x": 0.4985,
+      "y": 0,
+      "z": 0.4694
+    }
+  },
+  "monster-goblin-branch_03": {
+    "nick": "branch_03",
+    "examine": "monster-goblin-branch_03",
+    "model": "imported/SM_Prop_Goblin_Branch_03.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.4,
+      "y": 0.4,
+      "z": 0.4
+    },
+    "position": {
+      "x": 0.4779,
+      "y": 0,
+      "z": 0.3223
+    }
+  },
+  "monster-goblin-drum_01": {
+    "nick": "drum_01",
+    "examine": "monster-goblin-drum_01",
+    "model": "imported/SM_Prop_Goblin_Drum_01.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.4,
+      "y": 0.4,
+      "z": 0.4
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0,
+      "z": 0.5
+    }
+  },
+  "monster-goblin-fence_01": {
+    "nick": "fence_01",
+    "examine": "monster-goblin-fence_01",
+    "model": "imported/SM_Prop_Goblin_Fence_01.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.4,
+      "y": 0.4,
+      "z": 0.4
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0,
+      "z": 0.4999
+    }
+  },
+  "monster-goblin-fence_02": {
+    "nick": "fence_02",
+    "examine": "monster-goblin-fence_02",
+    "model": "imported/SM_Prop_Goblin_Fence_02.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.4,
+      "y": 0.4,
+      "z": 0.4
+    },
+    "position": {
+      "x": 0.4949,
+      "y": 0.0454,
+      "z": 0.4725
+    }
+  },
+  "monster-goblin-rotisserie_01": {
+    "nick": "rotisserie_01",
+    "examine": "monster-goblin-rotisserie_01",
+    "model": "imported/SM_Prop_Goblin_Rotisserie_01.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.4,
+      "y": 0.4,
+      "z": 0.4
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0.0072,
+      "z": 0.4884
+    }
+  },
+  "monster-goblin-rotisserie_meat_01": {
+    "nick": "rotisserie_meat_01",
+    "examine": "monster-goblin-rotisserie_meat_01",
+    "model": "imported/SM_Prop_Goblin_Rotisserie_Meat_01.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.4,
+      "y": 0.4,
+      "z": 0.4
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0.0072,
+      "z": 0.5
+    }
+  },
+  "monster-goblin-spikes_01": {
+    "nick": "spikes_01",
+    "examine": "monster-goblin-spikes_01",
+    "model": "imported/SM_Prop_Goblin_Spikes_01.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.4,
+      "y": 0.4,
+      "z": 0.4
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0,
+      "z": 0.5
+    }
+  },
+  "monster-goblin-spikes_02": {
+    "nick": "spikes_02",
+    "examine": "monster-goblin-spikes_02",
+    "model": "imported/SM_Prop_Goblin_Spikes_02.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.4,
+      "y": 0.4,
+      "z": 0.4
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0,
+      "z": 0.5
+    }
+  },
+  "monster-goblin-spikes_03": {
+    "nick": "spikes_03",
+    "examine": "monster-goblin-spikes_03",
+    "model": "imported/SM_Prop_Goblin_Spikes_03.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.4,
+      "y": 0.4,
+      "z": 0.4
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0,
+      "z": 0.5
+    }
+  },
+  "monster-goblin-spikes_04": {
+    "nick": "spikes_04",
+    "examine": "monster-goblin-spikes_04",
+    "model": "imported/SM_Prop_Goblin_Spikes_04.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.4,
+      "y": 0.4,
+      "z": 0.4
+    },
+    "position": {
+      "x": 0.4499,
+      "y": 0.0504,
+      "z": 0.5066
+    }
+  },
+  "monster-goblin-tent_01": {
+    "nick": "tent_01",
+    "examine": "monster-goblin-tent_01",
+    "model": "imported/SM_Prop_Goblin_Tent_01.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.4,
+      "y": 0.4,
+      "z": 0.4
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0.0675,
+      "z": 0.5
+    }
+  },
+  "monster-goblin-tent_02": {
+    "nick": "tent_02",
+    "examine": "monster-goblin-tent_02",
+    "model": "imported/SM_Prop_Goblin_Tent_02.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.4,
+      "y": 0.4,
+      "z": 0.4
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0.1343,
+      "z": 0.5
+    }
+  },
+  "monster-goblin-tent_03": {
+    "nick": "tent_03",
+    "examine": "monster-goblin-tent_03",
+    "model": "imported/SM_Prop_Goblin_Tent_03.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.4,
+      "y": 0.4,
+      "z": 0.4
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0,
+      "z": 0.5
+    }
+  },
+  "monster-goblin-tower_01": {
+    "nick": "tower_01",
+    "examine": "monster-goblin-tower_01",
+    "model": "imported/SM_Prop_Goblin_Tower_01.obj",
+    "texture": "shared-textures/dungeon/Dungeons_Texture_01.png",
+    "scale": {
+      "x": 0.4,
+      "y": 0.4,
+      "z": 0.4
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0.179,
+      "z": 0.5236
+    }
+  },
+  "skills-botany_raw-alien_flower_1": {
+    "nick": "alien_flower_1",
+    "examine": "skills-botany_raw-alien_flower_1",
+    "model": "imported/alien_flower.obj",
+    "texture": "imported/alien_flower_blue.png",
+    "scale": {
+      "x": 0.4,
+      "y": 0.4,
+      "z": 0.4
+    },
+    "position": {
+      "x": 0.4137,
+      "y": 0.0445,
+      "z": 0.6279
+    }
+  },
+  "skills-botany_raw-alien_flower_2": {
+    "nick": "alien_flower_2",
+    "examine": "skills-botany_raw-alien_flower_2",
+    "model": "imported/alien_flower.obj",
+    "texture": "imported/alien_flower_green.png",
+    "scale": {
+      "x": 0.4,
+      "y": 0.4,
+      "z": 0.4
+    },
+    "position": {
+      "x": 0.4137,
+      "y": 0.0445,
+      "z": 0.6279
+    }
+  },
+  "skills-botany_raw-alien_flower_3": {
+    "nick": "alien_flower_3",
+    "examine": "skills-botany_raw-alien_flower_3",
+    "model": "imported/alien_flower.obj",
+    "texture": "imported/alien_flower_red.png",
+    "scale": {
+      "x": 0.4,
+      "y": 0.4,
+      "z": 0.4
+    },
+    "position": {
+      "x": 0.4137,
+      "y": 0.0445,
+      "z": 0.6279
+    }
+  },
+  "skills-botany_raw-bush_berry_1": {
+    "nick": "bush_berry_1",
+    "examine": "skills-botany_raw-bush_berry_1",
+    "model": "imported/bush_berry.obj",
+    "texture": "imported/bush_berry_blue.png",
+    "scale": {
+      "x": 0.4,
+      "y": 0.4,
+      "z": 0.4
+    },
+    "position": {
+      "x": 0.5213,
+      "y": 0.0001,
+      "z": 0.5073
+    }
+  },
+  "skills-botany_raw-bush_berry_2": {
+    "nick": "bush_berry_2",
+    "examine": "skills-botany_raw-bush_berry_2",
+    "model": "imported/bush_berry.obj",
+    "texture": "imported/bush_berry_orange.png",
+    "scale": {
+      "x": 0.4,
+      "y": 0.4,
+      "z": 0.4
+    },
+    "position": {
+      "x": 0.5213,
+      "y": 0.0001,
+      "z": 0.5073
+    }
+  },
+  "skills-botany_raw-bush_berry_3": {
+    "nick": "bush_berry_3",
+    "examine": "skills-botany_raw-bush_berry_3",
+    "model": "imported/bush_berry.obj",
+    "texture": "imported/bush_berry_red.png",
+    "scale": {
+      "x": 0.4,
+      "y": 0.4,
+      "z": 0.4
+    },
+    "position": {
+      "x": 0.5213,
+      "y": 0.0001,
+      "z": 0.5073
+    }
+  },
+  "skills-botany_raw-bush_berry_4": {
+    "nick": "bush_berry_4",
+    "examine": "skills-botany_raw-bush_berry_4",
+    "model": "imported/bush_berry.obj",
+    "texture": "imported/bush_berry_teal.png",
+    "scale": {
+      "x": 0.4,
+      "y": 0.4,
+      "z": 0.4
+    },
+    "position": {
+      "x": 0.5213,
+      "y": 0.0001,
+      "z": 0.5073
+    }
+  },
+  "skills-botany_raw-bush_berry_5": {
+    "nick": "bush_berry_5",
+    "examine": "skills-botany_raw-bush_berry_5",
+    "model": "imported/bush_berry.obj",
+    "texture": "imported/bush_berry_yellow.png",
+    "scale": {
+      "x": 0.4,
+      "y": 0.4,
+      "z": 0.4
+    },
+    "position": {
+      "x": 0.5213,
+      "y": 0.0001,
+      "z": 0.5073
+    }
+  },
+  "skills-botany_raw-cabbage_1": {
+    "nick": "cabbage_1",
+    "examine": "skills-botany_raw-cabbage_1",
+    "model": "imported/cabbage.obj",
+    "texture": "imported/cabbage_green.png",
+    "scale": {
+      "x": 0.4,
+      "y": 0.4,
+      "z": 0.4
+    },
+    "position": {
+      "x": 0.4872,
+      "y": 0.0513,
+      "z": 0.4686
+    }
+  },
+  "skills-botany_raw-cabbage_2": {
+    "nick": "cabbage_2",
+    "examine": "skills-botany_raw-cabbage_2",
+    "model": "imported/cabbage.obj",
+    "texture": "imported/cabbage_stone.png",
+    "scale": {
+      "x": 0.4,
+      "y": 0.4,
+      "z": 0.4
+    },
+    "position": {
+      "x": 0.4872,
+      "y": 0.0513,
+      "z": 0.4686
+    }
+  },
+  "skills-botany_raw-cabbage_3": {
+    "nick": "cabbage_3",
+    "examine": "skills-botany_raw-cabbage_3",
+    "model": "imported/cabbage.obj",
+    "texture": "imported/cabbage_tan.png",
+    "scale": {
+      "x": 0.4,
+      "y": 0.4,
+      "z": 0.4
+    },
+    "position": {
+      "x": 0.4872,
+      "y": 0.0513,
+      "z": 0.4686
+    }
+  },
+  "skills-botany_raw-cabbage_4": {
+    "nick": "cabbage_4",
+    "examine": "skills-botany_raw-cabbage_4",
+    "model": "imported/cabbage.obj",
+    "texture": "imported/cabbage_yellow.png",
+    "scale": {
+      "x": 0.4,
+      "y": 0.4,
+      "z": 0.4
+    },
+    "position": {
+      "x": 0.4872,
+      "y": 0.0513,
+      "z": 0.4686
+    }
+  },
+  "skills-botany_raw-cactus_berry_1": {
+    "nick": "cactus_berry_1",
+    "examine": "skills-botany_raw-cactus_berry_1",
+    "model": "imported/cactus_berry.obj",
+    "texture": "imported/cactus_berry_crimson.png",
+    "scale": {
+      "x": 0.4,
+      "y": 0.4,
+      "z": 0.4
+    },
+    "position": {
+      "x": 0.4846,
+      "y": -0.0052,
+      "z": 0.5319
+    }
+  },
+  "skills-botany_raw-cactus_berry_2": {
+    "nick": "cactus_berry_2",
+    "examine": "skills-botany_raw-cactus_berry_2",
+    "model": "imported/cactus_berry.obj",
+    "texture": "imported/cactus_berry_indigo.png",
+    "scale": {
+      "x": 0.4,
+      "y": 0.4,
+      "z": 0.4
+    },
+    "position": {
+      "x": 0.4846,
+      "y": -0.0052,
+      "z": 0.5319
+    }
+  },
+  "skills-botany_raw-cactus_berry_3": {
+    "nick": "cactus_berry_3",
+    "examine": "skills-botany_raw-cactus_berry_3",
+    "model": "imported/cactus_berry.obj",
+    "texture": "imported/cactus_berry_lime.png",
+    "scale": {
+      "x": 0.4,
+      "y": 0.4,
+      "z": 0.4
+    },
+    "position": {
+      "x": 0.4846,
+      "y": -0.0052,
+      "z": 0.5319
+    }
+  },
+  "skills-botany_raw-cactus_berry_4": {
+    "nick": "cactus_berry_4",
+    "examine": "skills-botany_raw-cactus_berry_4",
+    "model": "imported/cactus_berry.obj",
+    "texture": "imported/cactus_berry_pink.png",
+    "scale": {
+      "x": 0.4,
+      "y": 0.4,
+      "z": 0.4
+    },
+    "position": {
+      "x": 0.4846,
+      "y": -0.0052,
+      "z": 0.5319
+    }
+  },
+  "skills-botany_raw-cactus_spine_1": {
+    "nick": "cactus_spine_1",
+    "examine": "skills-botany_raw-cactus_spine_1",
+    "model": "imported/cactus_spine.obj",
+    "texture": "imported/cactus_spine_blue.png",
+    "scale": {
+      "x": 0.4,
+      "y": 0.4,
+      "z": 0.4
+    },
+    "position": {
+      "x": 0.5145,
+      "y": -0.0041,
+      "z": 0.5137
+    }
+  },
+  "skills-botany_raw-cactus_spine_2": {
+    "nick": "cactus_spine_2",
+    "examine": "skills-botany_raw-cactus_spine_2",
+    "model": "imported/cactus_spine.obj",
+    "texture": "imported/cactus_spine_dark.png",
+    "scale": {
+      "x": 0.4,
+      "y": 0.4,
+      "z": 0.4
+    },
+    "position": {
+      "x": 0.5145,
+      "y": -0.0041,
+      "z": 0.5137
+    }
+  },
+  "skills-botany_raw-cactus_spine_3": {
+    "nick": "cactus_spine_3",
+    "examine": "skills-botany_raw-cactus_spine_3",
+    "model": "imported/cactus_spine.obj",
+    "texture": "imported/cactus_spine_green.png",
+    "scale": {
+      "x": 0.4,
+      "y": 0.4,
+      "z": 0.4
+    },
+    "position": {
+      "x": 0.5145,
+      "y": -0.0041,
+      "z": 0.5137
+    }
+  },
+  "skills-botany_raw-cactus_spine_4": {
+    "nick": "cactus_spine_4",
+    "examine": "skills-botany_raw-cactus_spine_4",
+    "model": "imported/cactus_spine.obj",
+    "texture": "imported/cactus_spine_purple.png",
+    "scale": {
+      "x": 0.4,
+      "y": 0.4,
+      "z": 0.4
+    },
+    "position": {
+      "x": 0.5145,
+      "y": -0.0041,
+      "z": 0.5137
+    }
+  },
+  "skills-botany_raw-drooping_willow_1": {
+    "nick": "drooping_willow_1",
+    "examine": "skills-botany_raw-drooping_willow_1",
+    "model": "imported/drooping_willow.obj",
+    "texture": "imported/drooping_willow_burned.png",
+    "scale": {
+      "x": 0.4,
+      "y": 0.4,
+      "z": 0.4
+    },
+    "position": {
+      "x": 0.4862,
+      "y": 0.0527,
+      "z": 0.552
+    }
+  },
+  "skills-botany_raw-drooping_willow_2": {
+    "nick": "drooping_willow_2",
+    "examine": "skills-botany_raw-drooping_willow_2",
+    "model": "imported/drooping_willow.obj",
+    "texture": "imported/drooping_willow_dark.png",
+    "scale": {
+      "x": 0.4,
+      "y": 0.4,
+      "z": 0.4
+    },
+    "position": {
+      "x": 0.4862,
+      "y": 0.0527,
+      "z": 0.552
+    }
+  },
+  "skills-botany_raw-drooping_willow_3": {
+    "nick": "drooping_willow_3",
+    "examine": "skills-botany_raw-drooping_willow_3",
+    "model": "imported/drooping_willow.obj",
+    "texture": "imported/drooping_willow_green.png",
+    "scale": {
+      "x": 0.4,
+      "y": 0.4,
+      "z": 0.4
+    },
+    "position": {
+      "x": 0.4862,
+      "y": 0.0527,
+      "z": 0.552
+    }
+  },
+  "skills-botany_raw-drooping_willow_4": {
+    "nick": "drooping_willow_4",
+    "examine": "skills-botany_raw-drooping_willow_4",
+    "model": "imported/drooping_willow.obj",
+    "texture": "imported/drooping_willow_invert.png",
+    "scale": {
+      "x": 0.4,
+      "y": 0.4,
+      "z": 0.4
+    },
+    "position": {
+      "x": 0.4862,
+      "y": 0.0527,
+      "z": 0.552
+    }
+  },
+  "skills-botany_raw-reed_1": {
+    "nick": "reed_1",
+    "examine": "skills-botany_raw-reed_1",
+    "model": "imported/reed.obj",
+    "texture": "imported/reed_cyan.png",
+    "scale": {
+      "x": 0.4,
+      "y": 0.4,
+      "z": 0.4
+    },
+    "position": {
+      "x": 0.5446,
+      "y": 0.0487,
+      "z": 0.4902
+    }
+  },
+  "skills-botany_raw-reed_2": {
+    "nick": "reed_2",
+    "examine": "skills-botany_raw-reed_2",
+    "model": "imported/reed.obj",
+    "texture": "imported/reed_indigo.png",
+    "scale": {
+      "x": 0.4,
+      "y": 0.4,
+      "z": 0.4
+    },
+    "position": {
+      "x": 0.5446,
+      "y": 0.0487,
+      "z": 0.4902
+    }
+  },
+  "skills-botany_raw-reed_3": {
+    "nick": "reed_3",
+    "examine": "skills-botany_raw-reed_3",
+    "model": "imported/reed.obj",
+    "texture": "imported/reed_red.png",
+    "scale": {
+      "x": 0.4,
+      "y": 0.4,
+      "z": 0.4
+    },
+    "position": {
+      "x": 0.5446,
+      "y": 0.0487,
+      "z": 0.4902
+    }
+  },
+  "skills-botany_raw-weed_1": {
+    "nick": "weed_1",
+    "examine": "skills-botany_raw-weed_1",
+    "model": "imported/weed.obj",
+    "texture": "imported/weed_blue.png",
+    "scale": {
+      "x": 0.4,
+      "y": 0.4,
+      "z": 0.4
+    },
+    "position": {
+      "x": 0.4761,
+      "y": 0.0937,
+      "z": 0.5076
+    }
+  },
+  "skills-botany_raw-weed_2": {
+    "nick": "weed_2",
+    "examine": "skills-botany_raw-weed_2",
+    "model": "imported/weed.obj",
+    "texture": "imported/weed_bright.png",
+    "scale": {
+      "x": 0.4,
+      "y": 0.4,
+      "z": 0.4
+    },
+    "position": {
+      "x": 0.4761,
+      "y": 0.0937,
+      "z": 0.5076
+    }
+  },
+  "skills-botany_raw-weed_3": {
+    "nick": "weed_3",
+    "examine": "skills-botany_raw-weed_3",
+    "model": "imported/weed.obj",
+    "texture": "imported/weed_dull.png",
+    "scale": {
+      "x": 0.4,
+      "y": 0.4,
+      "z": 0.4
+    },
+    "position": {
+      "x": 0.4761,
+      "y": 0.0937,
+      "z": 0.5076
+    }
+  },
+  "skills-botany_raw-weed_4": {
+    "nick": "weed_4",
+    "examine": "skills-botany_raw-weed_4",
+    "model": "imported/weed.obj",
+    "texture": "imported/weed_pastel.png",
+    "scale": {
+      "x": 0.4,
+      "y": 0.4,
+      "z": 0.4
+    },
+    "position": {
+      "x": 0.4761,
+      "y": 0.0937,
+      "z": 0.5076
+    }
+  },
+  "skills-botany_raw-witch_1": {
+    "nick": "witch_1",
+    "examine": "skills-botany_raw-witch_1",
+    "model": "imported/witch.obj",
+    "texture": "imported/witch_bulbous.png",
+    "scale": {
+      "x": 0.4,
+      "y": 0.4,
+      "z": 0.4
+    },
+    "position": {
+      "x": 0.2885,
+      "y": 0.0167,
+      "z": 0.5913
+    }
+  },
+  "skills-botany_raw-witch_2": {
+    "nick": "witch_2",
+    "examine": "skills-botany_raw-witch_2",
+    "model": "imported/witch.obj",
+    "texture": "imported/witch_fall.png",
+    "scale": {
+      "x": 0.4,
+      "y": 0.4,
+      "z": 0.4
+    },
+    "position": {
+      "x": 0.2885,
+      "y": 0.0167,
+      "z": 0.5913
+    }
+  },
+  "skills-botany_raw-witch_3": {
+    "nick": "witch_3",
+    "examine": "skills-botany_raw-witch_3",
+    "model": "imported/witch.obj",
+    "texture": "imported/witch_green.png",
+    "scale": {
+      "x": 0.4,
+      "y": 0.4,
+      "z": 0.4
+    },
+    "position": {
+      "x": 0.2885,
+      "y": 0.0167,
+      "z": 0.5913
+    }
+  },
+  "skills-botany_raw-witch_4": {
+    "nick": "witch_4",
+    "examine": "skills-botany_raw-witch_4",
+    "model": "imported/witch.obj",
+    "texture": "imported/witch_spore.png",
+    "scale": {
+      "x": 0.4,
+      "y": 0.4,
+      "z": 0.4
+    },
+    "position": {
+      "x": 0.2885,
+      "y": 0.0167,
+      "z": 0.5913
+    }
+  },
+  "skills-furnace-furnace_01": {
+    "nick": "furnace_01",
+    "examine": "skills-furnace-furnace_01",
+    "model": "imported/SM_Prop_Furnace_01.obj",
+    "texture": "shared-textures/pirate/Texture_01_A.png",
+    "scale": {
+      "x": 0.4,
+      "y": 0.4,
+      "z": 0.4
+    },
+    "position": {
+      "x": 0.1841,
+      "y": 0,
+      "z": 1.0845
+    }
+  },
+  "skills-furnace-furnace_02": {
+    "nick": "furnace_02",
+    "examine": "skills-furnace-furnace_02",
+    "model": "imported/SM_Prop_Furnace_02.obj",
+    "texture": "shared-textures/pirate/Texture_01_A.png",
+    "scale": {
+      "x": 0.4,
+      "y": 0.4,
+      "z": 0.4
+    },
+    "position": {
+      "x": 0.1841,
+      "y": 0,
+      "z": 1.0845
+    }
+  },
+  "town-exterior-sign-sign_01": {
+    "nick": "sign_01",
+    "examine": "town-exterior-sign-sign_01",
+    "model": "imported/SM_Prop_Sign_Attachment_01.obj",
+    "texture": "shared-textures/pirate/Texture_01_A.png",
+    "scale": {
+      "x": 0.4,
+      "y": 0.4,
+      "z": 0.4
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0.7715,
+      "z": 0.4294
+    }
+  },
+  "town-exterior-sign-sign_02": {
+    "nick": "sign_02",
+    "examine": "town-exterior-sign-sign_02",
+    "model": "imported/SM_Prop_Sign_Attachment_02.obj",
+    "texture": "shared-textures/pirate/Texture_01_A.png",
+    "scale": {
+      "x": 0.4,
+      "y": 0.4,
+      "z": 0.4
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0.5,
+      "z": 0.4294
+    }
+  },
+  "town-exterior-sign-sign_03": {
+    "nick": "sign_03",
+    "examine": "town-exterior-sign-sign_03",
+    "model": "imported/SM_Prop_Sign_Attachment_03.obj",
+    "texture": "shared-textures/pirate/Texture_01_A.png",
+    "scale": {
+      "x": 0.4,
+      "y": 0.4,
+      "z": 0.4
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0.5,
+      "z": 0.4294
+    }
+  },
+  "town-interior-bar_counter-counter": {
+    "nick": "counter",
+    "examine": "town-interior-bar_counter-counter",
+    "model": "imported/SM_Prop_Bar_Counter_01.obj",
+    "texture": "shared-textures/SimpleFantasyInteriorsTexture.png",
+    "scale": {
+      "x": 0.4,
+      "y": 0.4,
+      "z": 0.4
+    },
+    "position": {
+      "x": 1.5,
+      "y": 0,
+      "z": 0.5
+    },
+    "heightOverride": 0.5567
+  },
+  "town-interior-bar_counter-counter_gap": {
+    "nick": "counter_gap",
+    "examine": "town-interior-bar_counter-counter_gap",
+    "model": "imported/SM_Prop_Bar_Counter_Gap_01.obj",
+    "texture": "shared-textures/SimpleFantasyInteriorsTexture.png",
+    "scale": {
+      "x": 0.4,
+      "y": 0.4,
+      "z": 0.4
+    },
+    "position": {
+      "x": 0.6927,
+      "y": 0,
+      "z": 0.5
+    },
+    "heightOverride": 0.5529
+  },
+  "town-interior-bed-bed_01": {
+    "nick": "Bed",
+    "examine": "town-interior-bed-bed_01",
+    "model": "imported/SM_Prop_Bed_01.obj",
+    "texture": "shared-textures/SimpleFantasyInteriorsTexture.png",
+    "scale": {
+      "x": 0.4,
+      "y": 0.4,
+      "z": 0.4
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0,
+      "z": 1
+    }
+  },
+  "town-interior-bed-bed_02": {
+    "nick": "Bunk Bed",
+    "examine": "town-interior-bed-bed_02",
+    "model": "imported/SM_Prop_Bed_02.obj",
+    "texture": "shared-textures/SimpleFantasyInteriorsTexture.png",
+    "scale": {
+      "x": 0.3,
+      "y": 0.3,
+      "z": 0.3
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0,
+      "z": 1
+    }
+  },
+  "town-interior-bed-bed_03": {
+    "nick": "Large Bed",
+    "examine": "town-interior-bed-bed_03",
+    "model": "imported/SM_Prop_Bed_03.obj",
+    "texture": "shared-textures/SimpleFantasyInteriorsTexture.png",
+    "scale": {
+      "x": 0.4,
+      "y": 0.4,
+      "z": 0.4
+    },
+    "position": {
+      "x": 0.9973,
+      "y": 0,
+      "z": 1.0073
+    }
+  },
+  "town-interior-bed-bed_04": {
+    "nick": "bed_04",
+    "examine": "town-interior-bed-bed_04",
+    "model": "imported/SM_Prop_Bed_04.obj",
+    "texture": "shared-textures/SimpleFantasyInteriorsTexture.png",
+    "scale": {
+      "x": 0.4,
+      "y": 0.4,
+      "z": 0.4
+    },
+    "position": {
+      "x": 0.9973,
+      "y": 0,
+      "z": 1.0073
+    }
+  },
+  "town-interior-bed-bed_05": {
+    "nick": "bed_05",
+    "examine": "town-interior-bed-bed_05",
+    "model": "imported/SM_Prop_Bed_05.obj",
+    "texture": "shared-textures/SimpleFantasyInteriorsTexture.png",
+    "scale": {
+      "x": 0.4,
+      "y": 0.4,
+      "z": 0.4
+    },
+    "position": {
+      "x": 0.9973,
+      "y": 0,
+      "z": 1.0073
+    }
+  },
+  "town-interior-bed-bed_06": {
+    "nick": "bed_06",
+    "examine": "town-interior-bed-bed_06",
+    "model": "imported/SM_Prop_Bed_06.obj",
+    "texture": "shared-textures/SimpleFantasyInteriorsTexture.png",
+    "scale": {
+      "x": 0.4,
+      "y": 0.4,
+      "z": 0.4
+    },
+    "position": {
+      "x": 0.9973,
+      "y": 0,
+      "z": 1.0073
+    }
+  },
+  "town-interior-bed-bed_07": {
+    "nick": "bed_07",
+    "examine": "town-interior-bed-bed_07",
+    "model": "imported/SM_Prop_Bed_07.obj",
+    "texture": "shared-textures/SimpleFantasyInteriorsTexture.png",
+    "scale": {
+      "x": 0.4,
+      "y": 0.4,
+      "z": 0.4
+    },
+    "position": {
+      "x": 0.9973,
+      "y": 0,
+      "z": 1.0073
+    }
+  },
+  "town-interior-bed-bed_08": {
+    "nick": "Four-Poster Bed",
+    "examine": "town-interior-bed-bed_08",
+    "model": "imported/SM_Prop_Bed_08.obj",
+    "texture": "shared-textures/SimpleFantasyInteriorsTexture.png",
+    "scale": {
+      "x": 0.4,
+      "y": 0.4,
+      "z": 0.4
+    },
+    "position": {
+      "x": 0.9973,
+      "y": 0,
+      "z": 1.0073
+    }
+  },
+  "town-interior-bookshelf-bookshelf_01": {
+    "nick": "Bookshelf",
+    "examine": "town-interior-bookshelf-bookshelf_01",
+    "model": "imported/SM_Prop_Bookshelf_01.obj",
+    "texture": "shared-textures/SimpleFantasyInteriorsTexture.png",
+    "scale": {
+      "x": 0.4,
+      "y": 0.4,
+      "z": 0.4
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0,
+      "z": 0.1546
+    }
+  },
+  "town-interior-bookshelf-bookshelf_02": {
+    "nick": "Empty Shelves",
+    "examine": "town-interior-bookshelf-bookshelf_02",
+    "model": "imported/SM_Prop_Bookshelf_02.obj",
+    "texture": "shared-textures/SimpleFantasyInteriorsTexture.png",
+    "scale": {
+      "x": 0.4,
+      "y": 0.4,
+      "z": 0.4
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0,
+      "z": 0.1546
+    }
+  },
+  "town-interior-bookshelf-bookshelf_03": {
+    "nick": "bookshelf_03",
+    "examine": "town-interior-bookshelf-bookshelf_03",
+    "model": "imported/SM_Prop_Bookshelf_03.obj",
+    "texture": "shared-textures/SimpleFantasyInteriorsTexture.png",
+    "scale": {
+      "x": 0.4,
+      "y": 0.4,
+      "z": 0.4
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0.5,
+      "z": 0.0003
+    }
+  },
+  "town-interior-bookshelf-bookshelf_04": {
+    "nick": "bookshelf_04",
+    "examine": "town-interior-bookshelf-bookshelf_04",
+    "model": "imported/SM_Prop_Bookshelf_04.obj",
+    "texture": "shared-textures/SimpleFantasyInteriorsTexture.png",
+    "scale": {
+      "x": 0.4,
+      "y": 0.4,
+      "z": 0.4
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0.5,
+      "z": 0.0003
+    }
+  },
+  "town-interior-bookshelf-bookshelf_05": {
+    "nick": "bookshelf_05",
+    "examine": "town-interior-bookshelf-bookshelf_05",
+    "model": "imported/SM_Prop_Bookshelf_05.obj",
+    "texture": "shared-textures/SimpleFantasyInteriorsTexture.png",
+    "scale": {
+      "x": 0.4,
+      "y": 0.4,
+      "z": 0.4
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0.5,
+      "z": 0
+    }
+  },
+  "town-interior-cabinet-cabinet_01": {
+    "nick": "cabinet_01",
+    "examine": "town-interior-cabinet-cabinet_01",
+    "model": "imported/SM_Prop_Cabinets_01.obj",
+    "texture": "shared-textures/SimpleFantasyInteriorsTexture.png",
+    "scale": {
+      "x": 0.4,
+      "y": 0.4,
+      "z": 0.4
+    },
+    "position": {
+      "x": 1,
+      "y": 0,
+      "z": 0.2212
+    }
+  },
+  "town-interior-cabinet-cabinet_02": {
+    "nick": "cabinet_02",
+    "examine": "town-interior-cabinet-cabinet_02",
+    "model": "imported/SM_Prop_Cabinets_02.obj",
+    "texture": "shared-textures/SimpleFantasyInteriorsTexture.png",
+    "scale": {
+      "x": 0.4,
+      "y": 0.4,
+      "z": 0.4
+    },
+    "position": {
+      "x": 1,
+      "y": 0,
+      "z": 0.2275
+    }
+  },
+  "town-interior-cabinet-cabinet_03": {
+    "nick": "cabinet_03",
+    "examine": "town-interior-cabinet-cabinet_03",
+    "model": "imported/SM_Prop_Cabinets_03.obj",
+    "texture": "shared-textures/SimpleFantasyInteriorsTexture.png",
+    "scale": {
+      "x": 0.3,
+      "y": 0.3,
+      "z": 0.3
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0,
+      "z": 0.1551
+    }
+  },
+  "town-interior-cabinet-cabinet_04": {
+    "nick": "cabinet_04",
+    "examine": "town-interior-cabinet-cabinet_04",
+    "model": "imported/SM_Prop_Cabinets_04.obj",
+    "texture": "shared-textures/SimpleFantasyInteriorsTexture.png",
+    "scale": {
+      "x": 0.3,
+      "y": 0.3,
+      "z": 0.3
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0,
+      "z": 0.1551
+    }
+  },
+  "town-interior-cabinet-cabinet_05": {
+    "nick": "cabinet_05",
+    "examine": "town-interior-cabinet-cabinet_05",
+    "model": "imported/SM_Prop_Cabinets_05.obj",
+    "texture": "shared-textures/SimpleFantasyInteriorsTexture.png",
+    "scale": {
+      "x": 0.4,
+      "y": 0.4,
+      "z": 0.4
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0,
+      "z": 0.2073
+    }
+  },
+  "town-interior-cabinet-cabinet_06": {
+    "nick": "cabinet_06",
+    "examine": "town-interior-cabinet-cabinet_06",
+    "model": "imported/SM_Prop_Cabinets_06.obj",
+    "texture": "shared-textures/SimpleFantasyInteriorsTexture.png",
+    "scale": {
+      "x": 0.4,
+      "y": 0.4,
+      "z": 0.4
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0,
+      "z": 0.2073
+    }
+  },
+  "town-interior-chair-chair_01": {
+    "nick": "chair_01",
+    "examine": "town-interior-chair-chair_01",
+    "model": "imported/SM_Prop_Chair_01.obj",
+    "texture": "shared-textures/SimpleFantasyInteriorsTexture.png",
+    "scale": {
+      "x": 0.4,
+      "y": 0.4,
+      "z": 0.4
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0,
+      "z": 0.5
+    }
+  },
+  "town-interior-chair-chair_02": {
+    "nick": "chair_02",
+    "examine": "town-interior-chair-chair_02",
+    "model": "imported/SM_Prop_Chair_02.obj",
+    "texture": "shared-textures/SimpleFantasyInteriorsTexture.png",
+    "scale": {
+      "x": 0.4,
+      "y": 0.4,
+      "z": 0.4
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0,
+      "z": 0.4984
+    }
+  },
+  "town-interior-chair-chair_03": {
+    "nick": "chair_03",
+    "examine": "town-interior-chair-chair_03",
+    "model": "imported/SM_Prop_Chair_03.obj",
+    "texture": "shared-textures/SimpleFantasyInteriorsTexture.png",
+    "scale": {
+      "x": 0.4,
+      "y": 0.4,
+      "z": 0.4
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0,
+      "z": 0.5
+    }
+  },
+  "town-interior-chair-chair_04": {
+    "nick": "chair_04",
+    "examine": "town-interior-chair-chair_04",
+    "model": "imported/SM_Prop_Chair_04.obj",
+    "texture": "shared-textures/SimpleFantasyInteriorsTexture.png",
+    "scale": {
+      "x": 0.4,
+      "y": 0.4,
+      "z": 0.4
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0,
+      "z": 0.4987
+    }
+  },
+  "town-interior-chair-throne_01": {
+    "nick": "throne_01",
+    "examine": "town-interior-chair-throne_01",
+    "model": "imported/SM_Prop_Throne_01.obj",
+    "texture": "shared-textures/SimpleFantasyInteriorsTexture.png",
+    "scale": {
+      "x": 0.4,
+      "y": 0.4,
+      "z": 0.4
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0,
+      "z": 0.5
+    }
+  },
+  "town-interior-chair-throne_02": {
+    "nick": "throne_02",
+    "examine": "town-interior-chair-throne_02",
+    "model": "imported/SM_Prop_Throne_02.obj",
+    "texture": "shared-textures/SimpleFantasyInteriorsTexture.png",
+    "scale": {
+      "x": 0.4,
+      "y": 0.4,
+      "z": 0.4
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0,
+      "z": 0.5
+    }
+  },
+  "town-interior-chair-throne_03": {
+    "nick": "throne_03",
+    "examine": "town-interior-chair-throne_03",
+    "model": "imported/SM_Prop_Throne_03.obj",
+    "texture": "shared-textures/SimpleFantasyInteriorsTexture.png",
+    "scale": {
+      "x": 0.4,
+      "y": 0.4,
+      "z": 0.4
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0,
+      "z": 0.5
+    }
+  },
+  "town-interior-decoration-mountedhead_01": {
+    "nick": "Boar Head",
+    "examine": "town-interior-decoration-mountedhead_01",
+    "model": "imported/SM_Prop_Mounted_BoarHead_01.obj",
+    "texture": "shared-textures/SimpleFantasyInteriorsTexture.png",
+    "scale": {
+      "x": 0.4,
+      "y": 0.4,
+      "z": 0.4
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0.8275,
+      "z": 0
+    }
+  },
+  "town-interior-decoration-mountedhead_02": {
+    "nick": "Stag Head",
+    "examine": "town-interior-decoration-mountedhead_02",
+    "model": "imported/SM_Prop_Mounted_StagHead_01.obj",
+    "texture": "shared-textures/SimpleFantasyInteriorsTexture.png",
+    "scale": {
+      "x": 0.4,
+      "y": 0.4,
+      "z": 0.4
+    },
+    "position": {
+      "x": 0.5,
+      "y": 1.1105,
+      "z": 0
+    }
+  },
+  "town-interior-decoration-painting_01": {
+    "nick": "painting_01",
+    "examine": "town-interior-decoration-painting_01",
+    "model": "imported/SM_Prop_Painting_01.obj",
+    "texture": "shared-textures/SimpleFantasyInteriorsTexture.png",
+    "scale": {
+      "x": 0.4,
+      "y": 0.4,
+      "z": 0.4
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0.5,
+      "z": 0
+    }
+  },
+  "town-interior-decoration-painting_02": {
+    "nick": "painting_02",
+    "examine": "town-interior-decoration-painting_02",
+    "model": "imported/SM_Prop_Painting_02.obj",
+    "texture": "shared-textures/SimpleFantasyInteriorsTexture.png",
+    "scale": {
+      "x": 0.4,
+      "y": 0.4,
+      "z": 0.4
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0.5,
+      "z": 0
+    }
+  },
+  "town-interior-decoration-painting_03": {
+    "nick": "painting_03",
+    "examine": "town-interior-decoration-painting_03",
+    "model": "imported/SM_Prop_Painting_03.obj",
+    "texture": "shared-textures/SimpleFantasyInteriorsTexture.png",
+    "scale": {
+      "x": 0.4,
+      "y": 0.4,
+      "z": 0.4
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0.5,
+      "z": 0
+    }
+  },
+  "town-interior-decoration-weapon_01": {
+    "nick": "weapon_01",
+    "examine": "town-interior-decoration-weapon_01",
+    "model": "imported/SM_Prop_WallWeapon_01.obj",
+    "texture": "shared-textures/SimpleFantasyInteriorsTexture.png",
+    "scale": {
+      "x": 0.4,
+      "y": 0.4,
+      "z": 0.4
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0.5,
+      "z": 0.0491
+    }
+  },
+  "town-interior-decoration-weapon_02": {
+    "nick": "weapon_02",
+    "examine": "town-interior-decoration-weapon_02",
+    "model": "imported/SM_Prop_WallWeapon_02.obj",
+    "texture": "shared-textures/SimpleFantasyInteriorsTexture.png",
+    "scale": {
+      "x": 0.4,
+      "y": 0.4,
+      "z": 0.4
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0.5,
+      "z": 0
+    }
+  },
+  "town-interior-decoration-weapon_03": {
+    "nick": "weapon_03",
+    "examine": "town-interior-decoration-weapon_03",
+    "model": "imported/SM_Prop_WallWeapon_03.obj",
+    "texture": "shared-textures/SimpleFantasyInteriorsTexture.png",
+    "scale": {
+      "x": 0.4,
+      "y": 0.4,
+      "z": 0.4
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0.5099,
+      "z": 0
+    }
+  },
+  "town-interior-desk-desk_01": {
+    "nick": "desk_01",
+    "examine": "town-interior-desk-desk_01",
+    "model": "imported/SM_Prop_Desk_01.obj",
+    "texture": "shared-textures/SimpleFantasyInteriorsTexture.png",
+    "scale": {
+      "x": 0.6,
+      "y": 0.6,
+      "z": 0.6
+    },
+    "position": {
+      "x": 1,
+      "y": 0,
+      "z": 0.5
+    }
+  },
+  "town-interior-stool-stool_01": {
+    "nick": "stool_01",
+    "examine": "town-interior-stool-stool_01",
+    "model": "imported/SM_Prop_Stool_01.obj",
+    "texture": "shared-textures/SimpleFantasyInteriorsTexture.png",
+    "scale": {
+      "x": 0.4,
+      "y": 0.4,
+      "z": 0.4
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0,
+      "z": 0.5
+    }
+  },
+  "town-interior-stool-stool_02": {
+    "nick": "stool_02",
+    "examine": "town-interior-stool-stool_02",
+    "model": "imported/SM_Prop_Stool_02.obj",
+    "texture": "shared-textures/SimpleFantasyInteriorsTexture.png",
+    "scale": {
+      "x": 0.4,
+      "y": 0.4,
+      "z": 0.4
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0,
+      "z": 0.5
+    }
+  },
+  "town-interior-stool-stool_03": {
+    "nick": "stool_03",
+    "examine": "town-interior-stool-stool_03",
+    "model": "imported/SM_Prop_Stool_03.obj",
+    "texture": "shared-textures/SimpleFantasyInteriorsTexture.png",
+    "scale": {
+      "x": 0.4,
+      "y": 0.4,
+      "z": 0.4
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0,
+      "z": 0.5
+    }
+  },
+  "town-interior-table-table_01": {
+    "nick": "table_01",
+    "examine": "town-interior-table-table_01",
+    "model": "imported/SM_Prop_Table_01.obj",
+    "texture": "shared-textures/SimpleFantasyInteriorsTexture.png",
+    "scale": {
+      "x": 0.4,
+      "y": 0.4,
+      "z": 0.4
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0,
+      "z": 1
+    },
+    "heightOverride": 0.5321
+  },
+  "town-interior-table-table_02": {
+    "nick": "table_02",
+    "examine": "town-interior-table-table_02",
+    "model": "imported/SM_Prop_Table_02.obj",
+    "texture": "shared-textures/SimpleFantasyInteriorsTexture.png",
+    "scale": {
+      "x": 0.4,
+      "y": 0.4,
+      "z": 0.4
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0,
+      "z": 0.5
+    },
+    "heightOverride": 0.5321
+  },
+  "town-interior-table-table_03": {
+    "nick": "table_03",
+    "examine": "town-interior-table-table_03",
+    "model": "imported/SM_Prop_Table_03.obj",
+    "texture": "shared-textures/SimpleFantasyInteriorsTexture.png",
+    "scale": {
+      "x": 0.4,
+      "y": 0.4,
+      "z": 0.4
+    },
+    "position": {
+      "x": 1,
+      "y": 0,
+      "z": 1
+    },
+    "heightOverride": 0.5903
+  },
+  "town-interior-table-table_04": {
+    "nick": "table_04",
+    "examine": "town-interior-table-table_04",
+    "model": "imported/SM_Prop_Table_04.obj",
+    "texture": "shared-textures/SimpleFantasyInteriorsTexture.png",
+    "scale": {
+      "x": 0.4,
+      "y": 0.4,
+      "z": 0.4
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0,
+      "z": 0.5
+    },
+    "heightOverride": 0.5321
+  },
+  "town-interior-table-table_05": {
+    "nick": "table_05",
+    "examine": "town-interior-table-table_05",
+    "model": "imported/SM_Prop_Table_05.obj",
+    "texture": "shared-textures/SimpleFantasyInteriorsTexture.png",
+    "scale": {
+      "x": 0.4,
+      "y": 0.4,
+      "z": 0.4
+    },
+    "position": {
+      "x": 0.5,
+      "y": 0,
+      "z": 1
+    },
+    "heightOverride": 0.5321
+  },
+  "town-interior-table-table_06": {
+    "nick": "table_06",
+    "examine": "town-interior-table-table_06",
+    "model": "imported/SM_Prop_Table_06.obj",
+    "texture": "shared-textures/SimpleFantasyInteriorsTexture.png",
+    "scale": {
+      "x": 0.4,
+      "y": 0.4,
+      "z": 0.4
+    },
+    "position": {
+      "x": 1.5,
+      "y": 0,
+      "z": 0.5
+    },
+    "heightOverride": 0.717
+  }
+}

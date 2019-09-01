@@ -1,0 +1,12 @@
+{
+  "spawnRate": 0,
+  "capacity": 1,
+  "wanderArea": {
+    "type": "circle",
+    "layer": "world",
+    "x": -102,
+    "y": 8,
+    "radius": 3
+  },
+  "npc": "witch"
+}

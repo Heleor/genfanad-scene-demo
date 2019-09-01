@@ -1,0 +1,12 @@
+{
+  "spawnRate": 70,
+  "capacity": 2,
+  "wanderArea": {
+    "type": "circle",
+    "layer": "world",
+    "x": 176,
+    "y": 189,
+    "radius": 5
+  },
+  "npc": "human"
+}

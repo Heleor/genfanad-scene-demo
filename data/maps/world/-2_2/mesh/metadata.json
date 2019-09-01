@@ -1,0 +1,31 @@
+{
+  "texture": {
+    "maxIndex": 2,
+    "types": {
+      "stone_floor.png": 255
+    },
+    "colors": {
+      "0,0,0": "stone_floor.png"
+    }
+  },
+  "walls": {
+    "maxIndex": 3,
+    "types": {
+      "stone": 255,
+      "fence-small": 4294967295
+    },
+    "colors": {
+      "0,0,0": "stone",
+      "255,255,255": "fence-small"
+    }
+  },
+  "roofs": {
+    "maxIndex": 2,
+    "types": {
+      "clay": 255
+    },
+    "colors": {
+      "0,0,0": "clay"
+    }
+  }
+}

@@ -1,0 +1,347 @@
+<html>
+	<head>
+        <meta charset=utf-8>
+        <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+		<style>
+			body { margin: 0; }
+			canvas { width: 640px; height: 480px; }
+		</style>
+
+        <script
+            src="https://code.jquery.com/jquery-3.4.1.js"
+            integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+            crossorigin="anonymous"></script>
+
+        <script src="/play/js/imports/three.js"></script>
+        <script src="/play/js/imports/OBJLoader.js"></script>
+		<script src="/play/js/imports/MTLLoader.js"></script>
+        <script src="/play/js/imports/ZipLoader.min.js"></script>
+        <script src="/play/js/imports/OrbitControls.js"></script>
+
+        <script src="/play/js/constants.js"></script>
+        <script src="/play/js/terrain/mesh.js"></script>
+        <script src="/play/js/terrain/scenery.js"></script>
+    </head>
+
+    <body>
+        <p>Editor test.</p>
+
+        <p>
+            <input type='text' id='layer' value="world" />
+            <input type='text' id='x' value="1" />
+            <input type='text' id='y' value="1" />
+            <input type='submit' value='load' onclick='load()' />
+            |
+            <input type='button' value='toggle roofs' onclick='toggleRoofs()' />
+        </p>
+
+        <div id="main"></div>
+
+        <p id="context"></p>
+
+        <script>
+
+function cameraLookAt(camera, px, py, pz, ux, uy, uz, lx, ly, lz) {
+    camera.position.set(px, py, pz);
+    camera.up = new THREE.Vector3(ux,uy,uz);
+    camera.lookAt(lx,ly,lz);
+}
+
+function N(x) {
+    return new Number(x);
+}
+
+var scene = new THREE.Scene();
+var camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
+
+var directionalLight = new THREE.DirectionalLight( 0xffffff, 1.0 );
+scene.add( directionalLight );
+
+var renderer = new THREE.WebGLRenderer();
+renderer.setSize( 640, 480 );
+document.getElementById('main').appendChild( renderer.domElement );
+
+var controls = new THREE.OrbitControls(camera, renderer.domElement);
+cameraLookAt(camera, 32,30,32, 0,1,0, 64,0,64);
+controls.target.set(64,0,64);
+controls.update();
+
+class TextureManager {
+    constructor() {
+        this.loader = new THREE.TextureLoader();
+        this.cache = {};
+    }
+
+    get(name) {
+        return this.getUri('/static/textures/' + name);
+    }
+
+    getUri(name) {
+        if (this.cache[name]) {
+            return this.cache[name];
+        } else {
+            let tex = this.loader.load(name);
+            this.cache[name] = tex;
+            return tex;
+        }
+    }
+}
+
+const textures = new TextureManager();
+const meshLoader = new MeshLoader();
+meshLoader.useTextureManager(textures);
+
+const modelLoader = new ModelLoader();
+modelLoader.useTextureManager(textures);
+
+var uniforms = {
+    u_time: { type: "f", value: 1.0 }
+};
+
+modelLoader.useShaderUniforms(uniforms);
+
+const sceneryLoader = new SceneryLoader();
+sceneryLoader.useModelLoader(modelLoader);
+
+$.getJSON('/api/walls', (w) => {
+    meshLoader.useWallDefinitions(w);
+});
+$.getJSON('/api/roofs', (r) => {
+    meshLoader.useRoofDefinitions(r);
+});
+$.getJSON('/api/models', (r) => {
+    sceneryLoader.useSceneryDefinitions(r);
+});
+
+var terrain;
+
+function toggleRoofs() {
+    if (terrain) terrain.toggleRoofs();
+}
+
+var objects = new THREE.Group();
+scene.add(objects);
+function load() {
+
+    if (terrain) {
+        terrain.removeFromScene(scene);
+    }
+
+    let layer = document.getElementById('layer').value;
+    let x = document.getElementById('x').value;
+    let y = document.getElementById('y').value;
+
+    $.getJSON('/api/world/' + layer + '/' + x + '/' + y + '/mesh', (v) => {
+        let result = meshLoader.createMesh({ layer: layer, x: x, y: y }, v);
+        terrain = result.terrain;
+
+        terrain.layer = layer;
+        terrain.x = x;
+        terrain.y = y;
+
+        terrain.addToScene(scene);
+    })
+
+    $.getJSON('/api/world/' + layer + '/' + x + '/' + y + '/scenery', (v) => {
+        for (let i in v) {
+            sceneryLoader.createScenery(v[i], (mesh, definition) => {
+                let height = terrain.heightAt(mesh.position.x, mesh.position.z);                
+                mesh.translateY(height || 0.0);
+
+                objects.add(mesh);        
+            });
+        }
+    });
+
+    // ADD CODE FOR WATER SHADERS AFTER THIS COMMENT
+    let waterGeometry = new THREE.PlaneBufferGeometry( wSIZE, wSIZE );
+    let water = new THREE.Mesh(waterGeometry);
+    water.position.set(64, 2, 64);
+    water.rotation.x = Math.PI * - 0.5;
+    water.renderOrder = 10;
+    water.matrixAutoUpdate = false;
+    water.updateMatrix();
+    scene.add( water );
+    // ADD CODE FOR WATER SHADERS BEFORE THIS COMMENT
+
+    /*let water = new THREE.Water( waterGeometry, {
+        color: parseInt(e.args.color, 10),
+        scale: Number(e.args.scale),
+        flowDirection: new THREE.Vector2( Number(e.args.flowDirection.x), Number(e.args.flowDirection.y) ),
+        textureWidth: parseInt(e.args.textureWidth, 10),
+        textureHeight: parseInt(e.args.textureWidth, 10)
+    } );*/
+}
+
+var geometry = new THREE.BoxGeometry( 1, 1, 1 );
+var material = new THREE.MeshBasicMaterial( { wireframe: true, color: 0x00ff00 } );
+var cursor = new THREE.Mesh( geometry, material );
+cursor.position.set(64,0,64);
+scene.add( cursor );
+
+var cursorModel;
+function terrainMouse(position) {
+    //document.getElementById('context').innerText = JSON.stringify(position);
+    cursor.position.set(Math.floor(position.x) + 0.5,position.y + 0.5,Math.floor(position.z) + 0.5);
+    if (cursorModel) {
+        let def = {
+            rotation: N(document.getElementById('model-rotation').value)
+        }
+        scene.remove(cursorModel);
+        cursorModel = cursorModel.reset(def);
+        cursorModel.position.set(
+             cursor.position.x,
+             cursor.position.y - 0.5,
+             cursor.position.z);
+        scene.add(cursorModel);
+    }
+}
+
+function modelSelect() {
+    let model = document.getElementById('models').value;
+    console.log("Selected " + model);
+    let def = {
+        object: model,
+        x: 0,
+        y: 0,
+        rotation: N(document.getElementById('model-rotation').value)
+    }
+    sceneryLoader.createScenery(def, (mesh, info) => {
+        console.log("Loaded " + model)
+        if (cursorModel) {
+            scene.remove(cursorModel);
+        }
+        cursorModel = mesh;
+
+        cursorModel.position.set(
+             cursor.position.x,
+             cursor.position.y - 0.5,
+             cursor.position.z);
+
+        scene.add(cursorModel);
+    });
+}
+
+function modelPlace() {
+    let o = document.getElementById('models').value;
+
+    if (o == 'none') return;
+
+    let lx = Math.floor(cursor.position.x), ly = Math.floor(cursor.position.z);
+    let gx = lx + terrain.x * wSIZE, gy = ly + terrain.y * wSIZE;
+    let def = {
+        object: o,
+        rotation: N(document.getElementById('model-rotation').value),
+        x: lx, y: ly,
+        gx: gx, gy: gy,
+        layer: terrain.layer,
+        mx: terrain.x, my: terrain.y
+    }
+
+    sceneryLoader.createScenery(def, (mesh, definition) => {
+        let height = terrain.heightAt(mesh.position.x, mesh.position.z);                
+        mesh.translateY(height || 0.0);
+
+        objects.add(mesh);
+    });
+    
+    $.ajax({
+        url: '/api/world/placeObject',
+        type: 'POST',
+        contentType: 'application/json', 
+        data: JSON.stringify(def),
+    });
+}
+
+function rotate(a) {
+    let d = N(document.getElementById('model-rotation').value);
+    d += N(a);
+    while (d < 0) d += 360;
+    while (d >= 360) d -= 360;
+    document.getElementById('model-rotation').value = d;
+
+    let def = {
+        rotation: N(document.getElementById('model-rotation').value)
+    }
+    scene.remove(cursorModel);
+    cursorModel = cursorModel.reset(def);
+    cursorModel.position.set(
+             cursor.position.x,
+             cursor.position.y - 0.5,
+             cursor.position.z);
+    scene.add(cursorModel);
+}
+
+let mouse = new THREE.Vector2();
+let ray = new THREE.Raycaster();
+let last = new Date();
+renderer.domElement.onmousemove = (e) => {
+    // Only update the mouse position every few ms
+    let dt = new Date() - last;
+    if (dt < 100) return;
+    last = new Date();
+
+    let c = renderer.domElement;
+    let x = e.pageX - c.offsetLeft;
+    let y = e.pageY - c.offsetTop;
+
+    mouse.x = (x / c.width) * 2 - 1;
+    mouse.y = -(y / c.height) * 2 + 1;
+
+    if (terrain) {
+        ray.setFromCamera( mouse.clone(), camera );
+        let i = ray.intersectObject(terrain.mesh);
+        if (i[0]) {
+            terrainMouse(i[0].point)
+        } else {
+            document.getElementById('context').innerText = '';
+        }
+    } else {
+        document.getElementById('context').innerText = '';
+    }
+}
+
+document.body.onkeypress = (e) => {
+    if (e.keyCode == 112) {
+        modelPlace();
+    }
+}
+
+var r = 0;
+function animate() {
+    requestAnimationFrame( animate );
+
+    /*for (let i in objects.children) {
+        let object = objects.children[i];
+        if (object.type != 'Mesh') {
+            object.translateX(0.5);
+            object.translateZ(0.5);
+            object.rotateY(0.01);
+            object.translateZ(-0.5);
+            object.translateX(-0.5);
+            object.updateMatrix();
+        }
+    }*/
+
+    /*if (cursorModel) {
+        let def = {
+            rotation: r++
+        }
+        scene.remove(cursorModel);
+        cursorModel = cursorModel.reset(def);
+        cursorModel.position.set(
+                cursor.position.x,
+                cursor.position.y,
+                cursor.position.z);
+        scene.add(cursorModel);
+    }*/
+
+
+	renderer.render( scene, camera );
+}
+animate();
+        </script>
+
+    </body>
+</html>

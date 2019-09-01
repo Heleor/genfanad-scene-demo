@@ -1,0 +1,23 @@
+{
+  "nick": "Bridge",
+  "model": "unique/bridge.obj",
+  "texture": "unique/bridge.jpg",
+  "scale": {
+    "x": 0.035161744022503515,
+    "y": 0.034482758620689655,
+    "z": 0.03333333333333333
+  },
+  "position": {
+    "x": 85,
+    "y": 3,
+    "z": 66.5
+  },
+  "examine": "Without this, you'd have to ford the river. Might explain the town name.",
+  "minimap": {
+    "color": "grey",
+    "x": 60,
+    "y": 65,
+    "width": 47,
+    "height": 3
+  }
+}

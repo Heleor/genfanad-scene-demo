@@ -1,0 +1,25 @@
+{
+  "texture": {
+    "maxIndex": 2,
+    "types": {
+      "stone_floor.png": 255
+    },
+    "colors": {
+      "0,0,0": "stone_floor.png"
+    }
+  },
+  "walls": {
+    "maxIndex": 2,
+    "types": {
+      "stone": 255
+    },
+    "colors": {
+      "0,0,0": "stone"
+    }
+  },
+  "roofs": {
+    "maxIndex": 0,
+    "types": {},
+    "colors": {}
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "spawnRate": 70,
+  "capacity": 6,
+  "wanderArea": {
+    "type": "circle",
+    "layer": "world",
+    "x": 130,
+    "y": 183,
+    "radius": 7
+  },
+  "npc": "cow"
+}

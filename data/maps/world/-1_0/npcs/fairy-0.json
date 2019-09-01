@@ -1,0 +1,12 @@
+{
+  "spawnRate": 70,
+  "capacity": 4,
+  "wanderArea": {
+    "type": "circle",
+    "layer": "world",
+    "x": -123,
+    "y": 117,
+    "radius": 6
+  },
+  "npc": "fairy"
+}

@@ -1,0 +1,34 @@
+{
+  "texture": {
+    "maxIndex": 2,
+    "types": {
+      "wood_floor_color.png": 255
+    },
+    "colors": {
+      "0,0,0": "wood_floor_color.png"
+    }
+  },
+  "walls": {
+    "maxIndex": 3,
+    "types": {
+      "stone": 255,
+      "wood_doorframe": 4294967295
+    },
+    "colors": {
+      "0,0,0": "planks-base",
+      "255,255,255": "doorframe-wood",
+      "255,0,0": "planks-left",
+      "0,255,0": "planks-right",
+      "0,0,255": "planks-window"
+    }
+  },
+  "roofs": {
+    "maxIndex": 2,
+    "types": {
+      "straw": 255
+    },
+    "colors": {
+      "0,0,0": "straw"
+    }
+  }
+}

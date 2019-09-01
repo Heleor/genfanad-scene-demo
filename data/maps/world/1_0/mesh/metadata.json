@@ -1,0 +1,17 @@
+{
+  "texture": {
+    "maxIndex": 0,
+    "types": {},
+    "colors": {}
+  },
+  "walls": {
+    "maxIndex": 0,
+    "types": {},
+    "colors": {}
+  },
+  "roofs": {
+    "maxIndex": 0,
+    "types": {},
+    "colors": {}
+  }
+}

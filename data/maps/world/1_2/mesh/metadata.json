@@ -1,0 +1,21 @@
+{
+  "texture": {
+    "maxIndex": 0,
+    "types": {},
+    "colors": {}
+  },
+  "walls": {
+    "maxIndex": 2,
+    "types": {
+      "fence": 255
+    },
+    "colors": {
+      "0,0,0": "fence"
+    }
+  },
+  "roofs": {
+    "maxIndex": 0,
+    "types": {},
+    "colors": {}
+  }
+}

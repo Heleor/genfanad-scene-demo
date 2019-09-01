@@ -1,0 +1,13 @@
+{
+  "spawnRate": 70,
+  "capacity": 3,
+  "wanderArea": {
+    "type": "rect",
+    "layer": "world",
+    "minx": 108,
+    "maxx": 114,
+    "miny": 188,
+    "maxy": 190
+  },
+  "npc": "chicken"
+}

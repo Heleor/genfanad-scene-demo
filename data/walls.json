@@ -1,0 +1,218 @@
+{
+  "brick-base": {
+    "type": "polygon",
+    "texture": "walls/brick-base.png"
+  },
+  "brick-left": {
+    "type": "polygon",
+    "texture": "walls/brick-left.png"
+  },
+  "brick-right": {
+    "type": "polygon",
+    "texture": "walls/brick-right.png"
+  },
+  "brick-window": {
+    "type": "polygon",
+    "texture": "walls/brick-window.png"
+  },
+  "brick2-base": {
+    "type": "polygon",
+    "texture": "walls/brick2-base.png"
+  },
+  "brick2-left": {
+    "type": "polygon",
+    "texture": "walls/brick2-left.png"
+  },
+  "brick2-right": {
+    "type": "polygon",
+    "texture": "walls/brick2-right.png"
+  },
+  "brick2-window": {
+    "type": "polygon",
+    "texture": "walls/brick2-window.png"
+  },
+  "brick2-window2": {
+    "type": "polygon",
+    "texture": "walls/brick2-window2.png"
+  },
+  "church-base": {
+    "type": "polygon",
+    "texture": "walls/church-base.png"
+  },
+  "church-left": {
+    "type": "polygon",
+    "texture": "walls/church-left.png"
+  },
+  "church-right": {
+    "type": "polygon",
+    "texture": "walls/church-right.png"
+  },
+  "church-window": {
+    "type": "polygon",
+    "texture": "walls/church-window.png"
+  },
+  "desert-base": {
+    "type": "polygon",
+    "texture": "walls/desert-base.png"
+  },
+  "doorframe-wood": {
+    "type": "polygon",
+    "texture": "walls/doorframe-wood.png"
+  },
+  "fence-iron": {
+    "type": "polygon",
+    "texture": "walls/fence-iron.png"
+  },
+  "fence-picket": {
+    "type": "polygon",
+    "texture": "walls/fence-picket.png"
+  },
+  "fence-picket_med": {
+    "type": "polygon",
+    "texture": "walls/fence-picket_med.png"
+  },
+  "fence-picket_small": {
+    "type": "polygon",
+    "texture": "walls/fence-picket_small.png"
+  },
+  "fence-rusty": {
+    "type": "polygon",
+    "texture": "walls/fence-rusty.png"
+  },
+  "ice-base": {
+    "type": "polygon",
+    "texture": "walls/ice-base.png"
+  },
+  "natural-mossy": {
+    "type": "polygon",
+    "texture": "walls/natural-mossy.png"
+  },
+  "natural-rock": {
+    "type": "polygon",
+    "texture": "walls/natural-rock.png"
+  },
+  "natural-sand": {
+    "type": "polygon",
+    "texture": "walls/natural-sand.png"
+  },
+  "natural-stone": {
+    "type": "polygon",
+    "texture": "walls/natural-stone.png"
+  },
+  "overgrown-base": {
+    "type": "polygon",
+    "texture": "walls/overgrown-base.png"
+  },
+  "painted-wood-base": {
+    "type": "polygon",
+    "texture": "walls/painted-wood-base.png"
+  },
+  "painted-wood-left": {
+    "type": "polygon",
+    "texture": "walls/painted-wood-left.png"
+  },
+  "painted-wood-right": {
+    "type": "polygon",
+    "texture": "walls/painted-wood-right.png"
+  },
+  "planks-base": {
+    "type": "polygon",
+    "texture": "walls/planks-base.png"
+  },
+  "planks-left": {
+    "type": "polygon",
+    "texture": "walls/planks-left.png"
+  },
+  "planks-right": {
+    "type": "polygon",
+    "texture": "walls/planks-right.png"
+  },
+  "planks-window": {
+    "type": "polygon",
+    "texture": "walls/planks-window.png"
+  },
+  "plaster-base": {
+    "type": "polygon",
+    "texture": "walls/plaster-base.png"
+  },
+  "plaster-square": {
+    "type": "polygon",
+    "texture": "walls/plaster-square.png"
+  },
+  "plaster-ul-br": {
+    "type": "polygon",
+    "texture": "walls/plaster-ul-br.png"
+  },
+  "plaster-ur-bl": {
+    "type": "polygon",
+    "texture": "walls/plaster-ur-bl.png"
+  },
+  "plaster-wide": {
+    "type": "polygon",
+    "texture": "walls/plaster-wide.png"
+  },
+  "plaster-window": {
+    "type": "polygon",
+    "texture": "walls/plaster-window.png"
+  },
+  "ruined-base": {
+    "type": "polygon",
+    "texture": "walls/ruined-base.png"
+  },
+  "ruined-clean-base": {
+    "type": "polygon",
+    "texture": "walls/ruined-clean-base.png"
+  },
+  "ruined-clean-left": {
+    "type": "polygon",
+    "texture": "walls/ruined-clean-left.png"
+  },
+  "ruined-clean-right": {
+    "type": "polygon",
+    "texture": "walls/ruined-clean-right.png"
+  },
+  "ruined-clean-window": {
+    "type": "polygon",
+    "texture": "walls/ruined-clean-window.png"
+  },
+  "ruined-left": {
+    "type": "polygon",
+    "texture": "walls/ruined-left.png"
+  },
+  "ruined-right": {
+    "type": "polygon",
+    "texture": "walls/ruined-right.png"
+  },
+  "ruined-window": {
+    "type": "polygon",
+    "texture": "walls/ruined-window.png"
+  },
+  "ruined-window2": {
+    "type": "polygon",
+    "texture": "walls/ruined-window2.png"
+  },
+  "stone-base": {
+    "type": "polygon",
+    "texture": "walls/stone-base.png"
+  },
+  "stone-window": {
+    "type": "polygon",
+    "texture": "walls/stone-window.png"
+  },
+  "wood-base": {
+    "type": "polygon",
+    "texture": "walls/wood-base.png"
+  },
+  "wood-left": {
+    "type": "polygon",
+    "texture": "walls/wood-left.png"
+  },
+  "wood-right": {
+    "type": "polygon",
+    "texture": "walls/wood-right.png"
+  },
+  "wood-window": {
+    "type": "polygon",
+    "texture": "walls/wood-window.png"
+  }
+}

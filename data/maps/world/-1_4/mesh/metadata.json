@@ -1,0 +1,35 @@
+{
+  "texture": {
+    "maxIndex": 2,
+    "types": {
+      "wood_floor_color.png": 255
+    },
+    "colors": {
+      "0,0,0": "wood_floor_color.png"
+    }
+  },
+  "walls": {
+    "maxIndex": 7,
+    "types": {
+      "wrought-iron-wide": 255,
+      "stone": 4294967295,
+      "stone2": 4278190335,
+      "stone-window": 16711935,
+      "stone3": 65535,
+      "wood_doorframe": 4294902015
+    },
+    "colors": {
+      "0,0,0": "wrought-iron-wide",
+      "255,255,255": "stone",
+      "255,0,0": "stone2",
+      "0,255,0": "stone-window",
+      "0,0,255": "stone3",
+      "255,255,0": "wood_doorframe"
+    }
+  },
+  "roofs": {
+    "maxIndex": 0,
+    "types": {},
+    "colors": {}
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "texture": {
+    "maxIndex": 3,
+    "types": {
+      "wood_floor_color.png": 255,
+      "stone_floor.png": 4294967295
+    },
+    "colors": {
+      "0,0,0": "wood_floor_color.png",
+      "255,255,255": "stone_floor.png"
+    }
+  },
+  "walls": {
+    "maxIndex": 6,
+    "types": {
+      "wrought-iron-wide": 255,
+      "stone2": 4294967295,
+      "stone": 4278190335,
+      "stone3": 16711935,
+      "wood_doorframe": 65535
+    },
+    "colors": {
+      "0,0,0": "fence-iron",
+      "255,255,255": "brick-left",
+      "255,0,0": "brick-base",
+      "0,255,0": "brick-right",
+      "0,0,255": "doorframe-wood"
+    }
+  },
+  "roofs": {
+    "maxIndex": 0,
+    "types": {},
+    "colors": {}
+  }
+}
