@@ -302,41 +302,14 @@ renderer.domElement.onmousemove = (e) => {
     }
 }
 
-document.body.onkeypress = (e) => {
-    if (e.keyCode == 112) {
-        modelPlace();
-    }
-}
-
-var r = 0;
+var lastFrame = Date.now();
 function animate() {
     requestAnimationFrame( animate );
 
-    /*for (let i in objects.children) {
-        let object = objects.children[i];
-        if (object.type != 'Mesh') {
-            object.translateX(0.5);
-            object.translateZ(0.5);
-            object.rotateY(0.01);
-            object.translateZ(-0.5);
-            object.translateX(-0.5);
-            object.updateMatrix();
-        }
-    }*/
-
-    /*if (cursorModel) {
-        let def = {
-            rotation: r++
-        }
-        scene.remove(cursorModel);
-        cursorModel = cursorModel.reset(def);
-        cursorModel.position.set(
-                cursor.position.x,
-                cursor.position.y,
-                cursor.position.z);
-        scene.add(cursorModel);
-    }*/
-
+    let now = Date.now();
+    let dt = now - lastFrame;
+    lastFrame = now;
+    uniforms.u_time.value += dt / 1000.0;
 
 	renderer.render( scene, camera );
 }
